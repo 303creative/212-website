@@ -268,8 +268,6 @@
         <div style="margin-bottom:22px">
           <h2 style="font:800 22px/1.2 Outfit,sans-serif;color:#101114;margin:0 0 8px">{{ b.h }}</h2>
           <p style="font:400 16px/1.6 Outfit,sans-serif;color:#4a463f;margin:0 0 8px">{{ b.p }}</p>
-          <div style="height:8px;border-radius:4px;background:rgba(16,17,20,.07)"></div>
-          <div style="height:8px;border-radius:4px;background:rgba(16,17,20,.07);margin-top:6px;width:82%"></div>
         </div>
       </sc-for>
       <div style="background:#101114;color:#F5F1E8;border-radius:20px;padding:20px;margin-top:8px">
@@ -549,12 +547,72 @@ const ITEMS = [
 ];
 
 const POSTS = [
-  { w:1, es:'Conoce 212 Fast Food & Catering en Miami.', en:'Meet 212 Fast Food & Catering in Miami.', pes:'Entrevista y relato fundador.', pen:'Founder interview and origin story.' },
-  { w:2, es:'Qué encontrarás en el menú de 212.', en:"What you'll find on the 212 menu.", pes:'Menú y fotografías aprobados.', pen:'Approved menu and photography.' },
-  { w:3, es:'Cómo visitar 212: ubicación y horarios.', en:'How to visit 212: location and hours.', pes:'Datos actuales y acceso real.', pen:'Current data and real access notes.' },
-  { w:4, es:'Catering con 212: cómo preparar tu consulta.', en:'Catering with 212: how to prepare your inquiry.', pes:'Servicio y capacidad confirmados.', pen:'Confirmed service and capacity.' },
-  { w:6, es:'Las salsas de 212: ingredientes y combinaciones.', en:'The sauces of 212: ingredients and pairings.', pes:'Recetas revisadas con cocina.', pen:'Recipes reviewed with the kitchen.' },
-  { w:8, es:'La historia del nombre y los colores de 212.', en:'The story behind the name and colors of 212.', pes:'Testimonio directo autorizado.', pen:'Authorized first-hand testimony.' }
+  { w:1, es:'Conoce 212 Fast Food & Catering en Miami.', en:'Meet 212 Fast Food & Catering in Miami.', pes:'Entrevista y relato fundador.', pen:'Founder interview and origin story.',
+    bodyEs:[
+      {h:"Un food truck con dos turnos", p:"212 es comida rapida y catering en Wynwood, Miami. De manana funciona como parada de desayuno; de jueves a domingo abre servicio de madrugada para la vida nocturna del barrio."},
+      {h:"Hecho para llevar", p:"Todo el menu esta pensado para comer de pie, caminando o por delivery: sandwiches de desayuno, cafe y opciones que viajan bien sin perder calidad."},
+      {h:"Para el barrio y para eventos", p:"Ademas del truck, 212 ofrece catering para eventos en Miami. La misma cocina que resuelve tu desayuno puede alimentar a tu equipo o tu fiesta."}
+    ],
+    bodyEn:[
+      {h:"A truck with two shifts", p:"212 is fast food and catering in Wynwood, Miami. Mornings run as a breakfast stop; Thursday through Sunday it opens a late-night service for the neighborhood's nightlife."},
+      {h:"Built to go", p:"The whole menu is made to eat standing, walking or by delivery: breakfast sandwiches, coffee and options that travel well without losing quality."},
+      {h:"For the block and for events", p:"Beyond the truck, 212 caters events across Miami. The same kitchen that handles your breakfast can feed your team or your party."}
+    ] },
+  { w:2, es:'Que encontraras en el menu de 212.', en:"What you'll find on the 212 menu.", pes:'Menu y fotografias aprobados.', pen:'Approved menu and photography.',
+    bodyEs:[
+      {h:"Los sandwiches de desayuno", p:"El corazon del menu son los sandwiches de huevo: del simple de huevo y queso al Classic con bacon o salchicha y salsa de la casa, el Miami con jamon, suizo y salsa de cilantro y ajo, y el Loaded con papitas y salsa rosada picante."},
+      {h:"Cafe para el camino", p:"Americano, latte, iced latte y cold brew. El cold brew y el iced latte viajan especialmente bien si pides delivery en Wynwood."},
+      {h:"Combos", p:"Hay combos que juntan un sandwich con cafe para resolver el desayuno completo en un solo pedido."}
+    ],
+    bodyEn:[
+      {h:"The breakfast sandwiches", p:"The heart of the menu is the egg sandwiches: from a simple egg and cheese to the Classic with bacon or sausage and house sauce, the Miami with ham, swiss and cilantro-garlic sauce, and the Loaded with potato sticks and spicy pink sauce."},
+      {h:"Coffee to go", p:"Americano, latte, iced latte and cold brew. The cold brew and iced latte travel especially well if you order delivery in Wynwood."},
+      {h:"Combos", p:"There are combos that pair a sandwich with coffee so you can settle breakfast in a single order."}
+    ] },
+  { w:3, es:'Como visitar 212: ubicacion y horarios.', en:'How to visit 212: location and hours.', pes:'Datos actuales y acceso real.', pen:'Current data and real access notes.',
+    bodyEs:[
+      {h:"Donde", p:"212 esta en Wynwood, Miami. Confirma la ubicacion exacta del truck por mensaje directo antes de salir, porque un food truck puede ajustar su punto."},
+      {h:"Horario de desayuno", p:"De lunes a viernes de 6:30 a 11:30 a.m.; sabado y domingo de 7:30 a.m. a 12:00 p.m. Ideal para desayunar antes del trabajo o despues de entrenar."},
+      {h:"Servicio de madrugada", p:"De jueves a domingo 212 abre de noche, hasta las 2 o 3 de la manana segun el dia. Es la parada para la salida nocturna de Wynwood."}
+    ],
+    bodyEn:[
+      {h:"Where", p:"212 is in Wynwood, Miami. Confirm the truck's exact spot by direct message before heading out, since a food truck can adjust its location."},
+      {h:"Breakfast hours", p:"Monday to Friday 6:30 to 11:30 a.m.; Saturday and Sunday 7:30 a.m. to 12:00 p.m. Perfect before work or after a workout."},
+      {h:"Late-night service", p:"Thursday through Sunday, 212 opens at night until 2 or 3 a.m. depending on the day. It's the stop for a Wynwood night out."}
+    ] },
+  { w:4, es:'Catering con 212: como preparar tu consulta.', en:'Catering with 212: how to prepare your inquiry.', pes:'Servicio y capacidad confirmados.', pen:'Confirmed service and capacity.',
+    bodyEs:[
+      {h:"Que decir en tu consulta", p:"Para cotizar rapido, dinos fecha, lugar, numero de personas y si es desayuno o servicio de noche. Con eso armamos una propuesta realista."},
+      {h:"Que funciona para grupos", p:"Los sandwiches de desayuno y el cafe rinden muy bien para equipos, rodajes y eventos de manana. Para eventos nocturnos, el menu de madrugada."},
+      {h:"Con cuanto tiempo pedir", p:"Cuanto antes reserves la fecha, mejor. Los fines de semana y las fechas altas se llenan primero."}
+    ],
+    bodyEn:[
+      {h:"What to include in your inquiry", p:"For a fast quote, tell us the date, location, headcount and whether it's breakfast or night service. That's enough to build a realistic proposal."},
+      {h:"What works for groups", p:"The breakfast sandwiches and coffee scale well for teams, film shoots and morning events. For night events, the late-night menu."},
+      {h:"How far ahead to book", p:"The sooner you lock the date, the better. Weekends and peak dates fill first."}
+    ] },
+  { w:6, es:'Las salsas de 212: ingredientes y combinaciones.', en:'The sauces of 212: ingredients and pairings.', pes:'Recetas revisadas con cocina.', pen:'Recipes reviewed with the kitchen.',
+    bodyEs:[
+      {h:"Salsa de la casa", p:"Es la base de varios sandwiches, incluido el Classic. Aporta el sabor que identifica a 212."},
+      {h:"Cilantro y ajo", p:"La salsa del Miami: fresca y con caracter, pensada para acompanar el jamon y el queso suizo."},
+      {h:"Rosada picante", p:"La del Loaded: cremosa con un golpe de picante que equilibra el bacon, la salchicha y las papitas."}
+    ],
+    bodyEn:[
+      {h:"House sauce", p:"It's the base of several sandwiches, including the Classic. It carries the flavor that identifies 212."},
+      {h:"Cilantro and garlic", p:"The Miami's sauce: fresh and full of character, made to go with the ham and swiss."},
+      {h:"Spicy pink", p:"The Loaded's sauce: creamy with a kick of heat that balances the bacon, sausage and potato sticks."}
+    ] },
+  { w:8, es:'La historia del nombre y los colores de 212.', en:'The story behind the name and colors of 212.', pes:'Testimonio directo autorizado.', pen:'Authorized first-hand testimony.',
+    bodyEs:[
+      {h:"Un nombre corto y directo", p:"212 es facil de recordar y de decir. En un food truck, un nombre corto en letras grandes funciona mejor que uno largo."},
+      {h:"Amarillo y negro", p:"La marca usa amarillo sobre negro: alto contraste, visible de lejos y de noche, coherente con un truck que trabaja de madrugada."},
+      {h:"La historia completa, pronto", p:"El relato del fundador y el porque del nombre se publicara aqui con su testimonio directo."}
+    ],
+    bodyEn:[
+      {h:"A short, direct name", p:"212 is easy to remember and to say. On a food truck, a short name in big letters works better than a long one."},
+      {h:"Yellow and black", p:"The brand uses yellow on black: high contrast, visible from far and at night, consistent with a truck that works the late hours."},
+      {h:"The full story, soon", p:"The founder's account and the reason behind the name will be published here, in his own words."}
+    ] }
 ];
 
 const SCHEDULE = [
@@ -699,13 +757,7 @@ class Component extends DCLogic {
       ask: () => this.setState({ asked: true }),
       asked: s.asked,
       articleTitle: s.post != null ? POSTS[s.post][L] : '',
-      articleBlocks: L === 'es'
-        ? [{ h: 'Subtítulo útil', p: 'Un bloque por idea. Fotos propias, datos confirmados y nada de relleno.' },
-           { h: 'Lo que el cliente pregunta', p: 'Preguntas frecuentes auténticas, tomadas de mensajes reales.' },
-           { h: 'Prueba necesaria', p: s.post != null ? POSTS[s.post].pes : '' }]
-        : [{ h: 'A useful subhead', p: 'One block per idea. Own photos, confirmed data, no filler.' },
-           { h: 'What customers ask', p: 'Real FAQs, taken from actual messages.' },
-           { h: 'Proof needed', p: s.post != null ? POSTS[s.post].pen : '' }]
+      articleBlocks: s.post != null ? (POSTS[s.post][L === 'es' ? 'bodyEs' : 'bodyEn'] || []) : []
     };
   }
 
