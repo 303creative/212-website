@@ -74,9 +74,8 @@
         <button onClick="{{ goMenu }}" style="min-height:52px;border:none;border-radius:999px;background:#FFD34E;color:#101114;font:600 17px Outfit,sans-serif;cursor:pointer">{{ t.cta1 }}</button>
         <button onClick="{{ goLocation }}" style="min-height:52px;border:1.5px solid rgba(245,241,232,.35);border-radius:999px;background:none;color:#F5F1E8;font:600 17px Outfit,sans-serif;cursor:pointer">{{ t.cta2 }}</button>
       </div>
-      <div style="margin-top:26px;border:1.5px dashed rgba(245,241,232,.28);border-radius:18px;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px">
-        <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#FFD34E">{{ t.photoPending }}</span>
-        <span style="font:400 13px Outfit,sans-serif;color:rgba(245,241,232,.55);max-width:24ch">{{ t.photoHero }}</span>
+      <div style="margin-top:26px;border-radius:18px;aspect-ratio:4/5;overflow:hidden">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192041_68cc6b6d-a2f2-4f9b-937f-a341ed847971.png" alt="212 breakfast sandwich" style="width:100%;height:100%;object-fit:cover;display:block">
       </div>
     </section>
 
@@ -122,7 +121,7 @@
       <div style="display:flex;gap:12px;overflow-x:auto;padding:0 20px 8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch">
         <sc-for list="{{ featured }}" as="item" hint-placeholder-count="4">
           <button onClick="{{ item.open }}" style="scroll-snap-align:start;flex:0 0 208px;text-align:left;background:#fff;border:1px solid rgba(16,17,20,.1);border-radius:18px;padding:12px;cursor:pointer;display:flex;flex-direction:column;gap:10px">
-            <span style="aspect-ratio:1;border-radius:12px;background:#EFE9DC;border:1.5px dashed rgba(16,17,20,.2);display:flex;align-items:center;justify-content:center;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:rgba(16,17,20,.45)">{{ t.photoPending }}</span>
+            <span style="aspect-ratio:1;border-radius:12px;overflow:hidden;display:block"><img src="{{ item.img }}" alt="{{ item.name }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
             <span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:{{ item.tagColor }}">{{ item.conceptLabel }}</span>
             <span style="font:600 18px/1.2 Outfit,sans-serif;color:#101114">{{ item.name }}</span>
             <span style="font:400 13px/1.45 Outfit,sans-serif;color:#6b655c;min-height:38px">{{ item.desc }}</span>
@@ -486,16 +485,16 @@ const T = {
 };
 
 const ITEMS = [
-  { id:'eggcheese', c:'bf', cat:'bagels', name:'Egg & Cheese', price:'$7.50',
+  { id:'eggcheese', img:'https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192041_68cc6b6d-a2f2-4f9b-937f-a341ed847971.png', c:'bf', cat:'bagels', name:'Egg & Cheese', price:'$7.50',
     es:'2 huevos y queso americano.', en:'Two eggs and American cheese.',
     ingr:{es:'Huevo, queso americano, bagel', en:'Egg, American cheese, bagel'} },
-  { id:'classic', c:'bf', cat:'bagels', name:'The Classic', price:'$9.50',
+  { id:'classic', img:'https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192041_36074cb7-6206-4a85-8a3a-d8f3409d2789.png', c:'bf', cat:'bagels', name:'The Classic', price:'$9.50',
     es:'2 huevos, queso, bacon o salchicha y salsa de la casa.', en:'Two eggs, cheese, bacon or sausage and house sauce.',
     ingr:{es:'Huevo, queso, bacon o salchicha, salsa de la casa', en:'Egg, cheese, bacon or sausage, house sauce'} },
-  { id:'miami', c:'bf', cat:'bagels', name:'Miami Morning', price:'$10.50',
+  { id:'miami', img:'https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192120_76c8f314-3f75-4c01-b68b-c0b8432bb64d.png', c:'bf', cat:'bagels', name:'Miami Morning', price:'$10.50',
     es:'2 huevos, jamón, queso suizo, cebolla asada y salsa de cilantro y ajo.', en:'Two eggs, ham, swiss, roasted onion and cilantro-garlic sauce.',
     ingr:{es:'Huevo, jamón, queso suizo, cebolla asada', en:'Egg, ham, swiss, roasted onion'}, sauce:{es:'Cilantro y ajo', en:'Cilantro & garlic'} },
-  { id:'loaded', c:'bf', cat:'bagels', name:'Loaded Bagel', price:'$12.50',
+  { id:'loaded', img:'https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192120_0f60cd7f-4a4a-4593-b5a6-f4b69ded5847.png', c:'bf', cat:'bagels', name:'Loaded Bagel', price:'$12.50',
     es:'2 huevos, bacon, salchicha, queso, papitas y salsa rosada picante.', en:'Two eggs, bacon, sausage, cheese, potato sticks and spicy pink sauce.',
     ingr:{es:'Huevo, bacon, salchicha, queso, papitas', en:'Egg, bacon, sausage, cheese, potato sticks'}, sauce:{es:'Rosada picante', en:'Spicy pink'} },
   { id:'steakegg', c:'bf', cat:'bagels', name:'Steak & Egg', price:'$14.50',
@@ -671,7 +670,7 @@ class Component extends DCLogic {
     const decorate = (it) => ({
       id: it.id, name: it.name, price: showPrices ? it.price : '—', desc: it[L],
       tag: it.avail ? it.avail[L] : '', conceptLabel: label(it),
-      tagColor: it.c === 'bf' ? '#B9233B' : '#101114',
+      tagColor: it.c === 'bf' ? '#B9233B' : '#101114', img: it.img,
       open: () => this.setState({ sheet: it, asked: false })
     });
 
@@ -683,7 +682,7 @@ class Component extends DCLogic {
     }));
 
     const items = ITEMS.filter(i => i.c === s.concept && i.cat === s.cat).map(decorate);
-    const featured = ['loaded', 'butcher', 'miami', 'philly'].map(id => decorate(ITEMS.find(i => i.id === id)));
+    const featured = ['eggcheese', 'classic', 'miami', 'loaded'].map(id => decorate(ITEMS.find(i => i.id === id)));
 
     const posts = POSTS.map((p, i) => ({
       title: p[L], proof: L === 'es' ? p.pes : p.pen,
