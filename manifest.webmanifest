@@ -1,11 +1,11 @@
 {
-  "name": "212 Fast Food & Catering",
-  "short_name": "212",
+  "name": "AP Bagel",
+  "short_name": "AP Bagel",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#101114",
-  "theme_color": "#101114",
+  "background_color": "#123F2E",
+  "theme_color": "#123F2E",
   "orientation": "portrait",
   "icons": [
     {

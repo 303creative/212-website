@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AP Bagel — Bagels in Wynwood, Miami | Breakfast &amp; Late Night</title>
+<meta name="description" content="AP Bagel is a bagel trailer in Wynwood, Miami — breakfast bagels from 6:30 AM and a late-night menu until 3 AM, plus catering. The next chapter of 212.">
+<meta property="og:title" content="AP Bagel — Bagels in Wynwood, Miami">
+<meta property="og:description" content="Breakfast bagels from 6:30 AM and a late-night menu until 3 AM in Wynwood, Miami. Plus catering. The next chapter of 212.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero-desktop.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon-192.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FoodEstablishment","name":"AP Bagel","servesCuisine":["Bagels","Breakfast","Late night"],"image":"img/hero-desktop.jpg","areaServed":"Wynwood, Miami","address":{"@type":"PostalAddress","addressLocality":"Miami","addressRegion":"FL","addressCountry":"US"},"description":"AP Bagel is a bagel trailer in Wynwood, Miami with a breakfast menu and a late-night menu, plus catering. The evolution of 212."}
+</script>
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#101114" />
+<meta name="theme-color" content="#123F2E" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <link rel="manifest" href="manifest.webmanifest" />
 <link rel="apple-touch-icon" href="icon-192.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
 <style>
-  html, body { margin:0; padding:0; background:#101114; -webkit-font-smoothing:antialiased; }
+  html, body { margin:0; padding:0; background:#123F2E; -webkit-font-smoothing:antialiased; }
   body { font-family:Outfit, system-ui, sans-serif; }
   * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  a { color:#B9233B; text-decoration:underline; text-underline-offset:3px; }
-  a:hover { color:#EF1D2B; }
-  button:focus-visible, a:focus-visible { outline:3px solid #EF1D2B; outline-offset:2px; }
+  a { color:#A32A20; text-decoration:underline; text-underline-offset:3px; }
+  a:hover { color:#D83A2E; }
+  button:focus-visible, a:focus-visible { outline:3px solid #D83A2E; outline-offset:2px; }
+  @font-face { font-family:'Friend Bestie'; src:url('friend-bestie.otf') format('opentype'); font-display:swap; }
   @keyframes scrIn { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
   @keyframes sheetIn { from { transform:translateY(100%); } to { transform:none; } }
   @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -33,61 +45,65 @@
   if ('serviceWorker' in navigator) { window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); }); }
 </script>
 </helmet>
-<div style="max-width:520px;margin:0 auto;min-height:100vh;background:#F5F1E8;position:relative;overflow-x:clip;box-shadow:0 0 80px rgba(0,0,0,.5)">
+<div style="max-width:520px;margin:0 auto;min-height:100vh;background:#F4E9D2;position:relative;overflow-x:clip;box-shadow:0 0 80px rgba(0,0,0,.5)">
 
-  <header style="position:sticky;top:0;z-index:40;background:#101114;display:flex;align-items:center;gap:12px;padding:12px 16px;padding-top:max(12px, env(safe-area-inset-top))">
-    <button onClick="{{ goHome }}" aria-label="212" style="display:flex;align-items:center;gap:10px;background:none;border:none;padding:0;cursor:pointer">
-      <span style="width:38px;height:38px;border-radius:50%;border:2px solid #FFD34E;color:#FFD34E;font:800 15px Outfit,sans-serif;display:flex;align-items:center;justify-content:center;letter-spacing:.02em">212</span>
-      <span style="font:600 11px 'IBM Plex Mono',monospace;color:#F5F1E8;letter-spacing:.14em;text-align:left;line-height:1.25">FAST FOOD<br />&amp; CATERING</span>
+  <header style="position:sticky;top:0;z-index:40;background:#123F2E;display:flex;align-items:center;gap:12px;padding:12px 16px;padding-top:max(12px, env(safe-area-inset-top))">
+    <button onClick="{{ goHome }}" aria-label="AP Bagel" style="display:flex;align-items:center;gap:10px;background:none;border:none;padding:0;cursor:pointer">
+      <span style="width:38px;height:38px;border-radius:50%;border:2px solid #E0A526;color:#E0A526;font:800 15px Outfit,sans-serif;display:flex;align-items:center;justify-content:center;letter-spacing:.02em">AP</span>
+      <span style="display:flex;flex-direction:column;align-items:flex-start;gap:1px">
+        <span style="font:400 26px/0.9 'Friend Bestie',Outfit,sans-serif;color:#F4E9D2">AP Bagel</span>
+        <span style="font:600 9px 'IBM Plex Mono',monospace;color:#E0A526;letter-spacing:.2em">WYNWOOD · MIAMI</span>
+      </span>
     </button>
     <div style="flex:1"></div>
-    <div style="display:flex;background:rgba(245,241,232,.12);border-radius:999px;padding:3px">
+    <div style="display:flex;background:rgba(244,233,210,.12);border-radius:999px;padding:3px">
       <button onClick="{{ setEs }}" style="min-width:40px;height:32px;border:none;border-radius:999px;cursor:pointer;font:600 12px 'IBM Plex Mono',monospace;background:{{ esBg }};color:{{ esFg }}">ES</button>
       <button onClick="{{ setEn }}" style="min-width:40px;height:32px;border:none;border-radius:999px;cursor:pointer;font:600 12px 'IBM Plex Mono',monospace;background:{{ enBg }};color:{{ enFg }}">EN</button>
     </div>
-    <button onClick="{{ toggleDrawer }}" aria-label="Menu" style="width:44px;height:44px;border-radius:12px;border:none;background:#FFD34E;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
-      <span style="width:18px;height:2px;background:#101114;display:block"></span>
-      <span style="width:18px;height:2px;background:#101114;display:block"></span>
-      <span style="width:18px;height:2px;background:#101114;display:block"></span>
+    <button onClick="{{ toggleDrawer }}" aria-label="Menu" style="width:44px;height:44px;border-radius:12px;border:none;background:#E0A526;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+      <span style="width:18px;height:2px;background:#123F2E;display:block"></span>
+      <span style="width:18px;height:2px;background:#123F2E;display:block"></span>
+      <span style="width:18px;height:2px;background:#123F2E;display:block"></span>
     </button>
   </header>
 
   <sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
-    <nav style="position:sticky;top:68px;z-index:39;background:#101114;border-top:1px solid rgba(245,241,232,.12);padding:8px 16px 20px;animation:drawerIn .22s ease both">
+    <nav style="position:sticky;top:68px;z-index:39;background:#123F2E;border-top:1px solid rgba(244,233,210,.12);padding:8px 16px 20px;animation:drawerIn .22s ease both">
       <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="4">
-        <button onClick="{{ link.go }}" style="width:100%;text-align:left;background:none;border:none;border-bottom:1px solid rgba(245,241,232,.1);color:#F5F1E8;font:600 22px Outfit,sans-serif;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
-          {{ link.label }}<span style="color:#FFD34E;font-size:18px">→</span>
+        <button onClick="{{ link.go }}" style="width:100%;text-align:left;background:none;border:none;border-bottom:1px solid rgba(244,233,210,.1);color:#F4E9D2;font:600 22px Outfit,sans-serif;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+          {{ link.label }}<span style="color:#E0A526;font-size:18px">→</span>
         </button>
       </sc-for>
-      <p style="font:400 12px 'IBM Plex Mono',monospace;color:rgba(245,241,232,.5);margin:16px 0 0;line-height:1.6">{{ t.drawerNote }}</p>
+      <p style="font:400 12px 'IBM Plex Mono',monospace;color:rgba(244,233,210,.5);margin:16px 0 0;line-height:1.6">{{ t.drawerNote }}</p>
     </nav>
   </sc-if>
 
   <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
   <main style="animation:scrIn .3s ease both">
-    <section style="background:#101114;color:#F5F1E8;padding:28px 20px 32px;position:relative;overflow:hidden">
-      <div style="position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;border:26px solid rgba(239,29,43,.22)"></div>
-      <p style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#FFD34E;margin:0 0 14px">{{ t.heroKicker }}</p>
+    <section style="background:#123F2E;color:#F4E9D2;padding:28px 20px 32px;position:relative;overflow:hidden">
+      <div style="position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;border:26px solid rgba(216,58,46,.22)"></div>
+      <p style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#E0A526;margin:0 0 14px">{{ t.heroKicker }}</p>
       <h1 style="font:800 44px/1.02 Outfit,sans-serif;margin:0 0 14px;letter-spacing:-.02em;position:relative">{{ t.heroTitle }}</h1>
-      <p style="font:400 17px/1.5 Outfit,sans-serif;margin:0 0 22px;color:rgba(245,241,232,.82);max-width:34ch;text-wrap:pretty">{{ t.heroSub }}</p>
+      <p style="font:400 17px/1.5 Outfit,sans-serif;margin:0 0 22px;color:rgba(244,233,210,.82);max-width:34ch;text-wrap:pretty">{{ t.heroSub }}</p>
       <div style="display:flex;flex-direction:column;gap:10px;position:relative">
-        <button onClick="{{ goMenu }}" style="min-height:52px;border:none;border-radius:999px;background:#FFD34E;color:#101114;font:600 17px Outfit,sans-serif;cursor:pointer">{{ t.cta1 }}</button>
-        <button onClick="{{ goLocation }}" style="min-height:52px;border:1.5px solid rgba(245,241,232,.35);border-radius:999px;background:none;color:#F5F1E8;font:600 17px Outfit,sans-serif;cursor:pointer">{{ t.cta2 }}</button>
+        <button onClick="{{ goMenu }}" style="min-height:52px;border:none;border-radius:999px;background:#E0A526;color:#141715;font:600 17px Outfit,sans-serif;cursor:pointer">{{ t.cta1 }}</button>
+        <button onClick="{{ goLocation }}" style="min-height:52px;border:1.5px solid rgba(244,233,210,.35);border-radius:999px;background:none;color:#F4E9D2;font:600 17px Outfit,sans-serif;cursor:pointer">{{ t.cta2 }}</button>
       </div>
-      <div style="margin-top:26px;border-radius:18px;aspect-ratio:4/5;overflow:hidden">
-        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192041_68cc6b6d-a2f2-4f9b-937f-a341ed847971.png" alt="212 breakfast sandwich" style="width:100%;height:100%;object-fit:cover;display:block">
+      <div style="margin-top:26px;position:relative;border-radius:18px;overflow:hidden;background:#0E3224">
+        <img src="img/hero-mobile.jpg" alt="{{ t.altHero }}" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover" />
+        <span style="position:absolute;left:14px;bottom:14px;background:rgba(20,23,21,.72);color:#E0A526;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-radius:999px;padding:7px 12px">{{ t.conceptPhoto }}</span>
       </div>
     </section>
 
-    <section style="background:#FFD34E;color:#101114;padding:16px 20px">
+    <section style="background:#E0A526;color:#141715;padding:16px 20px">
       <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;margin:0 0 8px">{{ t.todayLabel }}</p>
       <div style="display:flex;gap:10px">
-        <div style="flex:1;background:#101114;color:#F5F1E8;border-radius:14px;padding:12px 14px">
-          <p style="font:600 11px 'IBM Plex Mono',monospace;color:#FFD34E;margin:0 0 4px;letter-spacing:.1em">{{ t.breakfast }}</p>
+        <div style="flex:1;background:#123F2E;color:#F4E9D2;border-radius:14px;padding:12px 14px">
+          <p style="font:600 11px 'IBM Plex Mono',monospace;color:#E0A526;margin:0 0 4px;letter-spacing:.1em">{{ t.breakfast }}</p>
           <p style="font:600 16px Outfit,sans-serif;margin:0">{{ todayBreakfast }}</p>
         </div>
-        <div style="flex:1;background:#101114;color:#F5F1E8;border-radius:14px;padding:12px 14px">
-          <p style="font:600 11px 'IBM Plex Mono',monospace;color:#EF1D2B;margin:0 0 4px;letter-spacing:.1em">{{ t.night }}</p>
+        <div style="flex:1;background:#123F2E;color:#F4E9D2;border-radius:14px;padding:12px 14px">
+          <p style="font:600 11px 'IBM Plex Mono',monospace;color:#E0A526;margin:0 0 4px;letter-spacing:.1em">{{ t.night }}</p>
           <p style="font:600 16px Outfit,sans-serif;margin:0">{{ todayNight }}</p>
         </div>
       </div>
@@ -95,16 +111,16 @@
     </section>
 
     <section style="padding:32px 20px 8px">
-      <h2 style="font:800 30px/1.05 Outfit,sans-serif;color:#101114;margin:0 0 6px;letter-spacing:-.02em">{{ t.conceptsTitle }}</h2>
-      <p style="font:400 16px/1.5 Outfit,sans-serif;color:#4a463f;margin:0 0 18px;text-wrap:pretty">{{ t.conceptsSub }}</p>
+      <h2 style="font:800 30px/1.05 Outfit,sans-serif;color:#141715;margin:0 0 6px;letter-spacing:-.02em">{{ t.conceptsTitle }}</h2>
+      <p style="font:400 16px/1.5 Outfit,sans-serif;color:#39473D;margin:0 0 18px;text-wrap:pretty">{{ t.conceptsSub }}</p>
       <div style="display:grid;gap:12px">
-        <button onClick="{{ goBreakfast }}" style="text-align:left;border:none;cursor:pointer;background:#101114;color:#F5F1E8;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px">
-          <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#FFD34E">06:30 — 11:30 AM</span>
+        <button onClick="{{ goBreakfast }}" style="text-align:left;border:none;cursor:pointer;background:#123F2E;color:#F4E9D2;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px">
+          <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#E0A526">06:30 — 11:30 AM</span>
           <span style="font:800 26px Outfit,sans-serif;letter-spacing:-.01em">{{ t.breakfastTitle }}</span>
-          <span style="font:400 15px/1.5 Outfit,sans-serif;color:rgba(245,241,232,.75)">{{ t.breakfastSub }}</span>
-          <span style="font:600 14px Outfit,sans-serif;color:#FFD34E;margin-top:4px">{{ t.seeMenu }} →</span>
+          <span style="font:400 15px/1.5 Outfit,sans-serif;color:rgba(244,233,210,.75)">{{ t.breakfastSub }}</span>
+          <span style="font:600 14px Outfit,sans-serif;color:#E0A526;margin-top:4px">{{ t.seeMenu }} →</span>
         </button>
-        <button onClick="{{ goNight }}" style="text-align:left;border:none;cursor:pointer;background:#EF1D2B;color:#fff;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px">
+        <button onClick="{{ goNight }}" style="text-align:left;border:none;cursor:pointer;background:#D83A2E;color:#fff;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px">
           <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em">07:00 PM — 03:00 AM</span>
           <span style="font:800 26px Outfit,sans-serif;letter-spacing:-.01em">{{ t.nightTitle }}</span>
           <span style="font:400 15px/1.5 Outfit,sans-serif;color:rgba(255,255,255,.9)">{{ t.nightSub }}</span>
@@ -115,137 +131,162 @@
 
     <section style="padding:28px 0 8px">
       <div style="display:flex;align-items:baseline;justify-content:space-between;padding:0 20px 14px">
-        <h2 style="font:800 30px/1.05 Outfit,sans-serif;color:#101114;margin:0;letter-spacing:-.02em">{{ t.popular }}</h2>
-        <button onClick="{{ goMenu }}" style="background:none;border:none;cursor:pointer;font:600 14px Outfit,sans-serif;color:#B9233B;text-decoration:underline;text-underline-offset:3px">{{ t.allMenu }}</button>
+        <h2 style="font:800 30px/1.05 Outfit,sans-serif;color:#141715;margin:0;letter-spacing:-.02em">{{ t.popular }}</h2>
+        <button onClick="{{ goMenu }}" style="background:none;border:none;cursor:pointer;font:600 14px Outfit,sans-serif;color:#A32A20;text-decoration:underline;text-underline-offset:3px">{{ t.allMenu }}</button>
       </div>
       <div style="display:flex;gap:12px;overflow-x:auto;padding:0 20px 8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch">
-        <sc-for list="{{ featured }}" as="item" hint-placeholder-count="4">
-          <button onClick="{{ item.open }}" style="scroll-snap-align:start;flex:0 0 208px;text-align:left;background:#fff;border:1px solid rgba(16,17,20,.1);border-radius:18px;padding:12px;cursor:pointer;display:flex;flex-direction:column;gap:10px">
-            <span style="aspect-ratio:1;border-radius:12px;overflow:hidden;display:block"><img src="{{ item.img }}" alt="{{ item.name }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+        <sc-for list="{{ featured }}" as="item" hint-placeholder-count="0">
+          <button onClick="{{ item.open }}" style="scroll-snap-align:start;flex:0 0 208px;text-align:left;background:#fff;border:1px solid rgba(20,23,21,.1);border-radius:18px;padding:12px;cursor:pointer;display:flex;flex-direction:column;gap:10px">
+            <sc-if value="{{ item.photo }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ item.photo }}" alt="{{ item.name }}" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;background:#E8DCC0" />
+            </sc-if>
             <span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:{{ item.tagColor }}">{{ item.conceptLabel }}</span>
-            <span style="font:600 18px/1.2 Outfit,sans-serif;color:#101114">{{ item.name }}</span>
-            <span style="font:400 13px/1.45 Outfit,sans-serif;color:#6b655c;min-height:38px">{{ item.desc }}</span>
-            <span style="font:600 17px Outfit,sans-serif;color:#101114">{{ item.price }}</span>
+            <span style="font:600 18px/1.2 Outfit,sans-serif;color:#141715">{{ item.name }}</span>
+            <span style="font:400 13px/1.45 Outfit,sans-serif;color:#5C6A5F;min-height:38px">{{ item.desc }}</span>
+            <span style="font:600 17px Outfit,sans-serif;color:#141715">{{ item.price }}</span>
           </button>
         </sc-for>
       </div>
     </section>
 
-    <section style="margin:28px 20px;background:#101114;color:#F5F1E8;border-radius:24px;padding:24px 20px">
-      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#FFD34E;margin:0 0 10px">{{ t.saucesKicker }}</p>
+    <section style="margin:28px 20px;color:#F4E9D2;border-radius:24px;padding:24px 20px;background-image:linear-gradient(rgba(18,63,46,.72), rgba(18,63,46,.72)), url('img/texture.jpg');background-size:cover;background-position:center">
+      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#E0A526;margin:0 0 10px">{{ t.saucesKicker }}</p>
       <h2 style="font:800 28px/1.08 Outfit,sans-serif;margin:0 0 14px;letter-spacing:-.02em">{{ t.saucesTitle }}</h2>
       <div style="display:grid;gap:8px">
         <sc-for list="{{ sauces }}" as="s" hint-placeholder-count="3">
-          <div style="display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(245,241,232,.12);padding-bottom:8px">
+          <div style="display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(244,233,210,.12);padding-bottom:8px">
             <span style="width:10px;height:10px;border-radius:50%;background:{{ s.color }};flex:0 0 auto"></span>
             <span style="font:500 17px Outfit,sans-serif">{{ s.name }}</span>
           </div>
         </sc-for>
       </div>
-      <p style="font:400 14px/1.5 Outfit,sans-serif;color:rgba(245,241,232,.7);margin:14px 0 0">{{ t.saucesNote }}</p>
+      <p style="font:400 14px/1.5 Outfit,sans-serif;color:rgba(244,233,210,.7);margin:14px 0 0">{{ t.saucesNote }}</p>
     </section>
 
     <section id="ubicacion" style="padding:8px 20px 28px">
-      <h2 style="font:800 30px/1.05 Outfit,sans-serif;color:#101114;margin:0 0 6px;letter-spacing:-.02em">{{ t.locationTitle }}</h2>
-      <p style="font:400 16px/1.5 Outfit,sans-serif;color:#4a463f;margin:0 0 16px">{{ t.locationSub }}</p>
-      <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(16,17,20,.12)">
-        <div style="height:150px;background:#EFE9DC;border-bottom:1.5px dashed rgba(16,17,20,.2);display:flex;align-items:center;justify-content:center;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:rgba(16,17,20,.45)">{{ t.mapPending }}</div>
+      <h2 style="font:800 30px/1.05 Outfit,sans-serif;color:#141715;margin:0 0 6px;letter-spacing:-.02em">{{ t.locationTitle }}</h2>
+      <p style="font:400 16px/1.5 Outfit,sans-serif;color:#39473D;margin:0 0 16px">{{ t.locationSub }}</p>
+      <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(20,23,21,.12)">
+        <div style="position:relative">
+          <img src="img/story-kitchen.jpg" alt="{{ t.altStory }}" style="display:block;width:100%;height:150px;object-fit:cover" />
+          <span style="position:absolute;left:12px;bottom:12px;background:rgba(20,23,21,.75);color:#F4E9D2;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-radius:999px;padding:7px 12px">{{ t.mapPending }}</span>
+        </div>
         <div style="background:#fff;padding:16px">
           <sc-for list="{{ schedule }}" as="d" hint-placeholder-count="7">
-            <div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid rgba(16,17,20,.07)">
-              <span style="font:600 13px 'IBM Plex Mono',monospace;color:#101114;letter-spacing:.06em">{{ d.day }}</span>
-              <span style="font:400 13px Outfit,sans-serif;color:#6b655c;text-align:right">{{ d.hours }}</span>
+            <div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid rgba(20,23,21,.07)">
+              <span style="font:600 13px 'IBM Plex Mono',monospace;color:#141715;letter-spacing:.06em">{{ d.day }}</span>
+              <span style="font:400 13px Outfit,sans-serif;color:#5C6A5F;text-align:right">{{ d.hours }}</span>
             </div>
           </sc-for>
-          <p style="font:400 12px/1.5 'IBM Plex Mono',monospace;color:#6b655c;margin:12px 0 0">{{ t.addressPending }}</p>
+          <p style="font:400 12px/1.5 'IBM Plex Mono',monospace;color:#5C6A5F;margin:12px 0 0">{{ t.addressPending }}</p>
         </div>
       </div>
     </section>
 
     <section style="padding:8px 20px 32px">
       <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px">
-        <h2 style="font:800 30px/1.05 Outfit,sans-serif;color:#101114;margin:0;letter-spacing:-.02em">{{ t.storiesTitle }}</h2>
-        <button onClick="{{ goBlog }}" style="background:none;border:none;cursor:pointer;font:600 14px Outfit,sans-serif;color:#B9233B;text-decoration:underline;text-underline-offset:3px">{{ t.allStories }}</button>
+        <h2 style="font:800 30px/1.05 Outfit,sans-serif;color:#141715;margin:0;letter-spacing:-.02em">{{ t.storiesTitle }}</h2>
+        <button onClick="{{ goBlog }}" style="background:none;border:none;cursor:pointer;font:600 14px Outfit,sans-serif;color:#A32A20;text-decoration:underline;text-underline-offset:3px">{{ t.allStories }}</button>
       </div>
       <div style="display:grid;gap:12px">
-        <sc-for list="{{ featuredPosts }}" as="p" hint-placeholder-count="3">
-          <button onClick="{{ p.open }}" style="text-align:left;display:flex;gap:12px;align-items:center;background:#fff;border:1px solid rgba(16,17,20,.1);border-radius:16px;padding:12px;cursor:pointer">
-            <span style="flex:0 0 72px;height:72px;border-radius:12px;background:#EFE9DC;border:1.5px dashed rgba(16,17,20,.2)"></span>
+        <sc-for list="{{ featuredPosts }}" as="p" hint-placeholder-count="0">
+          <button onClick="{{ p.open }}" style="text-align:left;display:flex;gap:12px;align-items:center;background:#fff;border:1px solid rgba(20,23,21,.1);border-radius:16px;padding:12px;cursor:pointer">
+            <sc-if value="{{ p.photo }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ p.photo }}" alt="{{ p.title }}" style="flex:0 0 72px;width:72px;height:72px;border-radius:12px;object-fit:cover;background:#E8DCC0" />
+            </sc-if>
             <span style="display:flex;flex-direction:column;gap:5px">
-              <span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#B9233B">{{ p.status }}</span>
-              <span style="font:600 16px/1.25 Outfit,sans-serif;color:#101114">{{ p.title }}</span>
+              <span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#A32A20">{{ p.status }}</span>
+              <span style="font:600 16px/1.25 Outfit,sans-serif;color:#141715">{{ p.title }}</span>
             </span>
           </button>
         </sc-for>
       </div>
     </section>
 
-    <section style="background:#EF1D2B;color:#fff;padding:44px 20px;text-align:center">
+    <section style="margin:0 20px 28px;border-radius:24px;overflow:hidden;background:#123F2E;color:#F4E9D2">
+      <img src="img/catering.jpg" alt="{{ t.altCatering }}" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover" />
+      <div style="padding:20px">
+        <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#E0A526;margin:0 0 8px">{{ t.cateringKicker }}</p>
+        <h2 style="font:800 26px/1.1 Outfit,sans-serif;margin:0 0 10px;letter-spacing:-.02em">{{ t.cateringTitle }}</h2>
+        <p style="font:400 15px/1.55 Outfit,sans-serif;color:rgba(244,233,210,.82);margin:0 0 16px">{{ t.cateringSub }}</p>
+        <button onClick="{{ openChat }}" style="min-height:48px;padding:0 24px;border:none;border-radius:999px;background:#E0A526;color:#141715;font:600 16px Outfit,sans-serif;cursor:pointer">{{ t.cateringCta }}</button>
+      </div>
+    </section>
+
+    <section style="color:#fff;padding:44px 20px;text-align:center;background-image:linear-gradient(rgba(216,58,46,.88), rgba(216,58,46,.88)), url('img/texture.jpg');background-size:cover;background-position:center">
       <h2 style="font:800 38px/1 Outfit,sans-serif;margin:0 0 18px;letter-spacing:-.02em">{{ t.finalCta }}</h2>
-      <button onClick="{{ goMenu }}" style="min-height:52px;padding:0 34px;border:none;border-radius:999px;background:#101114;color:#FFD34E;font:600 17px Outfit,sans-serif;cursor:pointer">{{ t.cta1 }}</button>
+      <button onClick="{{ goMenu }}" style="min-height:52px;padding:0 34px;border:none;border-radius:999px;background:#123F2E;color:#E0A526;font:600 17px Outfit,sans-serif;cursor:pointer">{{ t.cta1 }}</button>
     </section>
   </main>
   </sc-if>
 
   <sc-if value="{{ isMenu }}" hint-placeholder-val="{{ false }}">
   <main style="animation:scrIn .3s ease both;padding-bottom:20px">
-    <div style="background:#101114;color:#F5F1E8;padding:22px 20px 18px">
-      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#FFD34E;margin:0 0 10px">{{ t.menuKicker }}</p>
+    <div style="background:#123F2E;color:#F4E9D2;padding:22px 20px 18px">
+      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#E0A526;margin:0 0 10px">{{ t.menuKicker }}</p>
       <h1 style="font:800 36px/1.04 Outfit,sans-serif;margin:0 0 18px;letter-spacing:-.02em">{{ t.menuTitle }}</h1>
-      <div style="display:flex;background:rgba(245,241,232,.12);border-radius:999px;padding:4px">
+      <div style="display:flex;background:rgba(244,233,210,.12);border-radius:999px;padding:4px">
         <button onClick="{{ goBreakfast }}" style="flex:1;min-height:44px;border:none;border-radius:999px;cursor:pointer;font:600 15px Outfit,sans-serif;background:{{ bfBg }};color:{{ bfFg }}">{{ t.breakfast }}</button>
         <button onClick="{{ goNight }}" style="flex:1;min-height:44px;border:none;border-radius:999px;cursor:pointer;font:600 15px Outfit,sans-serif;background:{{ ntBg }};color:{{ ntFg }}">{{ t.night }}</button>
       </div>
-      <p style="font:400 13px/1.5 Outfit,sans-serif;color:rgba(245,241,232,.7);margin:14px 0 0">{{ conceptBlurb }}</p>
+      <p style="font:400 13px/1.5 Outfit,sans-serif;color:rgba(244,233,210,.7);margin:14px 0 0">{{ conceptBlurb }}</p>
     </div>
 
-    <div style="position:sticky;top:68px;z-index:30;background:#F5F1E8;padding:12px 0 10px;border-bottom:1px solid rgba(16,17,20,.08)">
+    <div style="position:sticky;top:68px;z-index:30;background:#F4E9D2;padding:12px 0 10px;border-bottom:1px solid rgba(20,23,21,.08)">
       <div style="display:flex;gap:8px;overflow-x:auto;padding:0 20px;-webkit-overflow-scrolling:touch">
         <sc-for list="{{ cats }}" as="c" hint-placeholder-count="4">
-          <button onClick="{{ c.go }}" style="flex:0 0 auto;min-height:40px;padding:0 18px;border-radius:999px;border:1px solid rgba(16,17,20,.15);cursor:pointer;font:600 14px Outfit,sans-serif;background:{{ c.bg }};color:{{ c.fg }}">{{ c.label }}</button>
+          <button onClick="{{ c.go }}" style="flex:0 0 auto;min-height:40px;padding:0 18px;border-radius:999px;border:1px solid rgba(20,23,21,.15);cursor:pointer;font:600 14px Outfit,sans-serif;background:{{ c.bg }};color:{{ c.fg }}">{{ c.label }}</button>
         </sc-for>
       </div>
     </div>
 
     <div style="padding:16px 20px 0;display:grid;gap:10px">
-      <sc-for list="{{ items }}" as="item" hint-placeholder-count="5">
-        <button onClick="{{ item.open }}" style="text-align:left;display:flex;gap:14px;align-items:center;background:#fff;border:1px solid rgba(16,17,20,.1);border-radius:18px;padding:12px;cursor:pointer">
-          <span style="flex:0 0 78px;height:78px;border-radius:14px;background:#EFE9DC;border:1.5px dashed rgba(16,17,20,.2);display:flex;align-items:center;justify-content:center;font:600 9px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:rgba(16,17,20,.4)">FOTO</span>
+      <sc-for list="{{ items }}" as="item" hint-placeholder-count="0">
+        <button onClick="{{ item.open }}" style="text-align:left;display:flex;gap:14px;align-items:center;background:#fff;border:1px solid rgba(20,23,21,.1);border-radius:18px;padding:12px;cursor:pointer">
+          <sc-if value="{{ item.photo }}" hint-placeholder-val="{{ false }}">
+            <img src="{{ item.photo }}" alt="{{ item.name }}" style="flex:0 0 78px;width:78px;height:78px;border-radius:14px;object-fit:cover;background:#E8DCC0" />
+          </sc-if>
+          <sc-if value="{{ item.noPhoto }}" hint-placeholder-val="{{ true }}">
+            <span style="flex:0 0 78px;height:78px;border-radius:14px;background:#E8DCC0;border:1.5px dashed rgba(20,23,21,.2);display:flex;align-items:center;justify-content:center;font:600 9px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:rgba(20,23,21,.4)">FOTO</span>
+          </sc-if>
           <span style="flex:1;display:flex;flex-direction:column;gap:4px;min-width:0">
-            <span style="font:600 18px/1.2 Outfit,sans-serif;color:#101114">{{ item.name }}</span>
-            <span style="font:400 13px/1.45 Outfit,sans-serif;color:#6b655c">{{ item.desc }}</span>
-            <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#B9233B">{{ item.tag }}</span>
+            <span style="font:600 18px/1.2 Outfit,sans-serif;color:#141715">{{ item.name }}</span>
+            <span style="font:400 13px/1.45 Outfit,sans-serif;color:#5C6A5F">{{ item.desc }}</span>
+            <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#A32A20">{{ item.tag }}</span>
           </span>
-          <span style="font:600 17px Outfit,sans-serif;color:#101114;flex:0 0 auto">{{ item.price }}</span>
+          <span style="font:600 17px Outfit,sans-serif;color:#141715;flex:0 0 auto">{{ item.price }}</span>
         </button>
       </sc-for>
     </div>
 
-    <div style="margin:22px 20px 0;background:#FFD34E;border-radius:20px;padding:18px">
-      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;margin:0 0 8px;color:#101114">{{ t.bagelsKicker }}</p>
-      <p style="font:400 15px/1.55 Outfit,sans-serif;color:#101114;margin:0">{{ conceptExtra }}</p>
+    <div style="margin:22px 20px 0;background:#E0A526;border-radius:20px;padding:18px">
+      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;margin:0 0 8px;color:#141715">{{ t.bagelsKicker }}</p>
+      <p style="font:400 15px/1.55 Outfit,sans-serif;color:#141715;margin:0">{{ conceptExtra }}</p>
     </div>
-    <p style="font:400 12px/1.6 'IBM Plex Mono',monospace;color:#6b655c;margin:18px 20px 0">{{ t.priceNote }}</p>
+    <p style="font:400 12px/1.6 'IBM Plex Mono',monospace;color:#5C6A5F;margin:18px 20px 0">{{ t.legacyNote }}</p>
+    <p style="font:400 12px/1.6 'IBM Plex Mono',monospace;color:#5C6A5F;margin:10px 20px 0">{{ t.priceNote }}</p>
   </main>
   </sc-if>
 
   <sc-if value="{{ isBlog }}" hint-placeholder-val="{{ false }}">
   <main style="animation:scrIn .3s ease both;padding-bottom:32px">
-    <div style="background:#101114;color:#F5F1E8;padding:22px 20px 26px">
-      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#FFD34E;margin:0 0 10px">{{ t.blogKicker }}</p>
+    <div style="background:#123F2E;color:#F4E9D2;padding:22px 20px 26px">
+      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#E0A526;margin:0 0 10px">{{ t.blogKicker }}</p>
       <h1 style="font:800 36px/1.04 Outfit,sans-serif;margin:0 0 10px;letter-spacing:-.02em">{{ t.blogTitle }}</h1>
-      <p style="font:400 16px/1.5 Outfit,sans-serif;color:rgba(245,241,232,.78);margin:0">{{ t.blogSub }}</p>
+      <p style="font:400 16px/1.5 Outfit,sans-serif;color:rgba(244,233,210,.78);margin:0">{{ t.blogSub }}</p>
     </div>
     <div style="padding:18px 20px 0;display:grid;gap:12px">
       <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
-        <button onClick="{{ p.open }}" style="text-align:left;background:#fff;border:1px solid rgba(16,17,20,.1);border-radius:18px;padding:14px;cursor:pointer;display:flex;flex-direction:column;gap:10px">
-          <span style="aspect-ratio:16/9;border-radius:12px;background:#EFE9DC;border:1.5px dashed rgba(16,17,20,.2);display:flex;align-items:center;justify-content:center;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:rgba(16,17,20,.45)">1600 × 900</span>
+        <button onClick="{{ p.open }}" style="text-align:left;background:#fff;border:1px solid rgba(20,23,21,.1);border-radius:18px;padding:14px;cursor:pointer;display:flex;flex-direction:column;gap:10px">
+          <sc-if value="{{ p.photo }}" hint-placeholder-val="{{ false }}">
+            <img src="{{ p.photo }}" alt="{{ p.title }}" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#E8DCC0" />
+          </sc-if>
           <span style="display:flex;gap:8px;align-items:center">
-            <span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#B9233B">{{ p.status }}</span>
-            <span style="font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#6b655c">{{ p.week }}</span>
+            <span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#A32A20">{{ p.status }}</span>
+            <span style="font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5C6A5F">{{ p.week }}</span>
           </span>
-          <span style="font:600 20px/1.2 Outfit,sans-serif;color:#101114">{{ p.title }}</span>
-          <span style="font:400 14px/1.5 Outfit,sans-serif;color:#6b655c">{{ p.proof }}</span>
+          <span style="font:600 20px/1.2 Outfit,sans-serif;color:#141715">{{ p.title }}</span>
+          <span style="font:400 14px/1.5 Outfit,sans-serif;color:#5C6A5F">{{ p.proof }}</span>
         </button>
       </sc-for>
     </div>
@@ -254,109 +295,118 @@
 
   <sc-if value="{{ isArticle }}" hint-placeholder-val="{{ false }}">
   <main style="animation:scrIn .3s ease both;padding-bottom:40px">
-    <button onClick="{{ goBlog }}" style="background:none;border:none;cursor:pointer;font:600 14px Outfit,sans-serif;color:#B9233B;padding:16px 20px 4px">← {{ t.backToBlog }}</button>
+    <button onClick="{{ goBlog }}" style="background:none;border:none;cursor:pointer;font:600 14px Outfit,sans-serif;color:#A32A20;padding:16px 20px 4px">← {{ t.backToBlog }}</button>
     <article style="padding:0 20px">
-      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#B9233B;margin:0 0 10px">{{ t.articleTemplate }}</p>
-      <h1 style="font:800 34px/1.06 Outfit,sans-serif;color:#101114;margin:0 0 12px;letter-spacing:-.02em;text-wrap:pretty">{{ articleTitle }}</h1>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;font:400 12px 'IBM Plex Mono',monospace;color:#6b655c;margin-bottom:18px">
+      <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#A32A20;margin:0 0 10px">{{ t.articleTemplate }}</p>
+      <h1 style="font:800 34px/1.06 Outfit,sans-serif;color:#141715;margin:0 0 12px;letter-spacing:-.02em;text-wrap:pretty">{{ articleTitle }}</h1>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;font:400 12px 'IBM Plex Mono',monospace;color:#5C6A5F;margin-bottom:18px">
         <span>{{ t.authorSlot }}</span><span>·</span><span>{{ t.dateSlot }}</span><span>·</span><span>{{ t.langSlot }}</span>
       </div>
-      <div style="aspect-ratio:16/9;border-radius:16px;background:#EFE9DC;border:1.5px dashed rgba(16,17,20,.2);display:flex;align-items:center;justify-content:center;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:rgba(16,17,20,.45);margin-bottom:20px">{{ t.photoPending }}</div>
-      <p style="font:500 19px/1.5 Outfit,sans-serif;color:#101114;margin:0 0 20px;padding-left:14px;border-left:4px solid #FFD34E">{{ t.answerFirst }}</p>
+      <sc-if value="{{ articlePhoto }}" hint-placeholder-val="{{ false }}">
+        <img src="{{ articlePhoto }}" alt="{{ articleTitle }}" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;background:#E8DCC0;margin-bottom:20px" />
+      </sc-if>
+      <p style="font:500 19px/1.5 Outfit,sans-serif;color:#141715;margin:0 0 20px;padding-left:14px;border-left:4px solid #E0A526">{{ t.answerFirst }}</p>
       <sc-for list="{{ articleBlocks }}" as="b" hint-placeholder-count="3">
         <div style="margin-bottom:22px">
-          <h2 style="font:800 22px/1.2 Outfit,sans-serif;color:#101114;margin:0 0 8px">{{ b.h }}</h2>
-          <p style="font:400 16px/1.6 Outfit,sans-serif;color:#4a463f;margin:0 0 8px">{{ b.p }}</p>
+          <h2 style="font:800 22px/1.2 Outfit,sans-serif;color:#141715;margin:0 0 8px">{{ b.h }}</h2>
+          <p style="font:400 16px/1.6 Outfit,sans-serif;color:#39473D;margin:0 0 8px">{{ b.p }}</p>
+          <div style="height:8px;border-radius:4px;background:rgba(20,23,21,.07)"></div>
+          <div style="height:8px;border-radius:4px;background:rgba(20,23,21,.07);margin-top:6px;width:82%"></div>
         </div>
       </sc-for>
-      <div style="background:#101114;color:#F5F1E8;border-radius:20px;padding:20px;margin-top:8px">
-        <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#FFD34E;margin:0 0 8px">{{ t.articleCtaKicker }}</p>
-        <p style="font:400 15px/1.55 Outfit,sans-serif;margin:0 0 14px;color:rgba(245,241,232,.8)">{{ t.articleCtaText }}</p>
-        <button onClick="{{ goMenu }}" style="min-height:48px;padding:0 24px;border:none;border-radius:999px;background:#FFD34E;color:#101114;font:600 16px Outfit,sans-serif;cursor:pointer">{{ t.cta1 }}</button>
+      <div style="background:#123F2E;color:#F4E9D2;border-radius:20px;padding:20px;margin-top:8px">
+        <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#E0A526;margin:0 0 8px">{{ t.articleCtaKicker }}</p>
+        <p style="font:400 15px/1.55 Outfit,sans-serif;margin:0 0 14px;color:rgba(244,233,210,.8)">{{ t.articleCtaText }}</p>
+        <button onClick="{{ goMenu }}" style="min-height:48px;padding:0 24px;border:none;border-radius:999px;background:#E0A526;color:#141715;font:600 16px Outfit,sans-serif;cursor:pointer">{{ t.cta1 }}</button>
       </div>
-      <p style="font:400 12px/1.6 'IBM Plex Mono',monospace;color:#6b655c;margin:18px 0 0">{{ t.articleNote }}</p>
+      <p style="font:400 12px/1.6 'IBM Plex Mono',monospace;color:#5C6A5F;margin:18px 0 0">{{ t.articleNote }}</p>
     </article>
   </main>
   </sc-if>
 
-  <footer style="background:#101114;color:rgba(245,241,232,.7);padding:32px 20px;padding-bottom:max(96px, env(safe-area-inset-bottom))">
-    <span style="width:44px;height:44px;border-radius:50%;border:2px solid #FFD34E;color:#FFD34E;font:800 16px Outfit,sans-serif;display:flex;align-items:center;justify-content:center">212</span>
-    <p style="font:600 15px Outfit,sans-serif;color:#F5F1E8;margin:14px 0 4px">212 Fast Food &amp; Catering</p>
+  <footer style="background:#123F2E;color:rgba(244,233,210,.7);padding:32px 20px;padding-bottom:max(96px, env(safe-area-inset-bottom))">
+    <span style="width:44px;height:44px;border-radius:50%;border:2px solid #E0A526;color:#E0A526;font:800 16px Outfit,sans-serif;display:flex;align-items:center;justify-content:center">AP</span>
+    <p style="font:400 30px/1 'Friend Bestie',Outfit,sans-serif;color:#F4E9D2;margin:14px 0 6px">AP Bagel</p>
     <p style="font:400 14px/1.6 Outfit,sans-serif;margin:0 0 18px">{{ t.footerAddress }}</p>
     <div style="display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:18px">
       <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="4">
-        <button onClick="{{ link.go }}" style="background:none;border:none;padding:0;cursor:pointer;font:500 14px Outfit,sans-serif;color:#F5F1E8;text-decoration:underline;text-underline-offset:3px">{{ link.label }}</button>
+        <button onClick="{{ link.go }}" style="background:none;border:none;padding:0;cursor:pointer;font:500 14px Outfit,sans-serif;color:#F4E9D2;text-decoration:underline;text-underline-offset:3px">{{ link.label }}</button>
       </sc-for>
     </div>
-    <p style="font:400 11px/1.7 'IBM Plex Mono',monospace;margin:0;color:rgba(245,241,232,.45)">{{ t.footerNote }}</p>
+    <p style="font:400 11px/1.7 'IBM Plex Mono',monospace;margin:0;color:rgba(244,233,210,.45)">{{ t.footerNote }}</p>
   </footer>
 
   <div style="position:fixed;inset:0;z-index:50;pointer-events:none;display:flex;justify-content:center">
     <div style="width:100%;max-width:520px;position:relative">
       <sc-if value="{{ chatOpen }}" hint-placeholder-val="{{ false }}">
-        <div style="position:absolute;left:12px;right:12px;bottom:92px;pointer-events:auto;background:#101114;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(16,17,20,.35);animation:sheetIn .28s cubic-bezier(.2,.8,.25,1) both;display:flex;flex-direction:column;max-height:min(72vh,520px)">
-          <div style="display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid rgba(245,241,232,.12)">
-            <span style="width:38px;height:38px;border-radius:50%;border:2px solid #FFD34E;color:#FFD34E;font:800 14px Outfit,sans-serif;display:flex;align-items:center;justify-content:center">212</span>
+        <div style="position:absolute;left:12px;right:12px;bottom:92px;pointer-events:auto;background:#123F2E;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(20,23,21,.35);animation:sheetIn .28s cubic-bezier(.2,.8,.25,1) both;display:flex;flex-direction:column;max-height:min(72vh,520px)">
+          <div style="display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid rgba(244,233,210,.12)">
+            <span style="width:38px;height:38px;border-radius:50%;border:2px solid #E0A526;color:#E0A526;font:800 14px Outfit,sans-serif;display:flex;align-items:center;justify-content:center">AP</span>
             <span style="flex:1;display:flex;flex-direction:column;gap:2px">
-              <span style="font:600 16px Outfit,sans-serif;color:#F5F1E8">{{ t.chatTitle }}</span>
-              <span style="font:400 11px 'IBM Plex Mono',monospace;color:rgba(245,241,232,.55)">{{ t.chatSub }}</span>
+              <span style="font:600 16px Outfit,sans-serif;color:#F4E9D2">{{ t.chatTitle }}</span>
+              <span style="font:400 11px 'IBM Plex Mono',monospace;color:rgba(244,233,210,.55)">{{ t.chatSub }}</span>
             </span>
-            <button onClick="{{ closeChat }}" aria-label="{{ t.chatClose }}" style="width:36px;height:36px;border-radius:50%;border:none;background:rgba(245,241,232,.12);color:#F5F1E8;font:600 16px Outfit,sans-serif;cursor:pointer">✕</button>
+            <button onClick="{{ closeChat }}" aria-label="{{ t.chatClose }}" style="width:36px;height:36px;border-radius:50%;border:none;background:rgba(244,233,210,.12);color:#F4E9D2;font:600 16px Outfit,sans-serif;cursor:pointer">✕</button>
           </div>
-          <div id="chatlog" style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#17181c">
+          <div id="chatlog" style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#0E3224">
             <sc-for list="{{ chatMsgs }}" as="m" hint-placeholder-count="1">
               <div style="display:flex;justify-content:{{ m.align }}">
                 <span style="max-width:84%;background:{{ m.bg }};color:{{ m.fg }};border-radius:{{ m.radius }};padding:11px 14px;font:400 15px/1.5 Outfit,sans-serif;text-wrap:pretty">{{ m.text }}</span>
               </div>
             </sc-for>
           </div>
-          <div style="padding:12px 16px 16px;border-top:1px solid rgba(245,241,232,.12)">
-            <p style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#FFD34E;margin:0 0 10px">{{ t.chatPick }}</p>
+          <div style="padding:12px 16px 16px;border-top:1px solid rgba(244,233,210,.12)">
+            <p style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#E0A526;margin:0 0 10px">{{ t.chatPick }}</p>
             <div style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch">
               <sc-for list="{{ chatQuestions }}" as="q" hint-placeholder-count="4">
-                <button onClick="{{ q.go }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid rgba(245,241,232,.25);background:none;color:#F5F1E8;font:500 14px Outfit,sans-serif;cursor:pointer">{{ q.label }}</button>
+                <button onClick="{{ q.go }}" style="flex:0 0 auto;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid rgba(244,233,210,.25);background:none;color:#F4E9D2;font:500 14px Outfit,sans-serif;cursor:pointer">{{ q.label }}</button>
               </sc-for>
             </div>
-            <button onClick="{{ goMenu }}" style="width:100%;min-height:46px;margin-top:10px;border:none;border-radius:999px;background:#FFD34E;color:#101114;font:600 15px Outfit,sans-serif;cursor:pointer">{{ t.chatGoMenu }}</button>
-            <p style="font:400 11px/1.6 'IBM Plex Mono',monospace;color:rgba(245,241,232,.5);margin:10px 0 0">{{ t.chatNote }}</p>
+            <button onClick="{{ goMenu }}" style="width:100%;min-height:46px;margin-top:10px;border:none;border-radius:999px;background:#E0A526;color:#141715;font:600 15px Outfit,sans-serif;cursor:pointer">{{ t.chatGoMenu }}</button>
+            <p style="font:400 11px/1.6 'IBM Plex Mono',monospace;color:rgba(244,233,210,.5);margin:10px 0 0">{{ t.chatNote }}</p>
           </div>
         </div>
       </sc-if>
-      <button onClick="{{ toggleChat }}" aria-label="{{ t.chatOpen }}" style="position:absolute;right:16px;bottom:max(18px, env(safe-area-inset-bottom));pointer-events:auto;width:62px;height:62px;border-radius:50%;border:2px solid #FFD34E;background:#101114;color:#FFD34E;cursor:pointer;box-shadow:0 12px 28px rgba(16,17,20,.4);display:flex;align-items:center;justify-content:center;gap:4px" style-hover="background:#1c1e23">
-        <span style="width:6px;height:6px;border-radius:50%;background:#FFD34E;display:block"></span>
-        <span style="width:6px;height:6px;border-radius:50%;background:#EF1D2B;display:block"></span>
-        <span style="width:6px;height:6px;border-radius:50%;background:#FFD34E;display:block"></span>
+      <button onClick="{{ toggleChat }}" aria-label="{{ t.chatOpen }}" style="position:absolute;right:16px;bottom:max(18px, env(safe-area-inset-bottom));pointer-events:auto;width:62px;height:62px;border-radius:50%;border:2px solid #E0A526;background:#123F2E;color:#E0A526;cursor:pointer;box-shadow:0 12px 28px rgba(20,23,21,.4);display:flex;align-items:center;justify-content:center;gap:4px" style-hover="background:#1c1e23">
+        <span style="width:6px;height:6px;border-radius:50%;background:#E0A526;display:block"></span>
+        <span style="width:6px;height:6px;border-radius:50%;background:#D83A2E;display:block"></span>
+        <span style="width:6px;height:6px;border-radius:50%;background:#E0A526;display:block"></span>
       </button>
     </div>
   </div>
 
   <sc-if value="{{ sheet }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ closeSheet }}" style="position:fixed;inset:0;z-index:60;background:rgba(16,17,20,.6);animation:fadeIn .2s ease both;display:flex;align-items:flex-end;justify-content:center">
-      <div onClick="{{ stop }}" style="width:100%;max-width:520px;background:#F5F1E8;border-radius:26px 26px 0 0;padding:10px 20px 28px;padding-bottom:max(28px, env(safe-area-inset-bottom));animation:sheetIn .3s cubic-bezier(.2,.8,.25,1) both;max-height:88vh;overflow-y:auto">
-        <div style="width:44px;height:5px;border-radius:3px;background:rgba(16,17,20,.2);margin:0 auto 16px"></div>
-        <div style="aspect-ratio:1;border-radius:18px;background:#EFE9DC;border:1.5px dashed rgba(16,17,20,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin-bottom:16px">
-          <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:rgba(16,17,20,.5)">{{ t.photoPending }}</span>
-          <span style="font:400 12px 'IBM Plex Mono',monospace;color:rgba(16,17,20,.4)">1600 × 1600</span>
-        </div>
+    <div onClick="{{ closeSheet }}" style="position:fixed;inset:0;z-index:60;background:rgba(20,23,21,.6);animation:fadeIn .2s ease both;display:flex;align-items:flex-end;justify-content:center">
+      <div onClick="{{ stop }}" style="width:100%;max-width:520px;background:#F4E9D2;border-radius:26px 26px 0 0;padding:10px 20px 28px;padding-bottom:max(28px, env(safe-area-inset-bottom));animation:sheetIn .3s cubic-bezier(.2,.8,.25,1) both;max-height:88vh;overflow-y:auto">
+        <div style="width:44px;height:5px;border-radius:3px;background:rgba(20,23,21,.2);margin:0 auto 16px"></div>
+        <sc-if value="{{ sheetPhoto }}" hint-placeholder-val="{{ false }}">
+          <img src="{{ sheetPhoto }}" alt="{{ sheet.name }}" style="display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;background:#E8DCC0;margin-bottom:16px" />
+        </sc-if>
+        <sc-if value="{{ sheetNoPhoto }}" hint-placeholder-val="{{ false }}">
+          <div style="aspect-ratio:1;border-radius:18px;background:#E8DCC0;border:1.5px dashed rgba(20,23,21,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin-bottom:16px">
+            <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:rgba(20,23,21,.5)">{{ t.photoPending }}</span>
+            <span style="font:400 12px 'IBM Plex Mono',monospace;color:rgba(20,23,21,.4)">1600 × 1600</span>
+          </div>
+        </sc-if>
         <p style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:{{ sheet.tagColor }};margin:0 0 8px">{{ sheet.conceptLabel }}</p>
         <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
-          <h2 style="font:800 28px/1.1 Outfit,sans-serif;color:#101114;margin:0;letter-spacing:-.02em">{{ sheet.name }}</h2>
-          <span style="font:800 24px Outfit,sans-serif;color:#101114">{{ sheet.price }}</span>
+          <h2 style="font:800 28px/1.1 Outfit,sans-serif;color:#141715;margin:0;letter-spacing:-.02em">{{ sheet.name }}</h2>
+          <span style="font:800 24px Outfit,sans-serif;color:#141715">{{ sheet.price }}</span>
         </div>
-        <p style="font:400 16px/1.55 Outfit,sans-serif;color:#4a463f;margin:10px 0 16px">{{ sheet.desc }}</p>
+        <p style="font:400 16px/1.55 Outfit,sans-serif;color:#39473D;margin:10px 0 16px">{{ sheet.desc }}</p>
         <div style="display:grid;gap:8px;margin-bottom:16px">
           <sc-for list="{{ sheetFacts }}" as="f" hint-placeholder-count="3">
-            <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(16,17,20,.1);padding-bottom:8px">
-              <span style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#6b655c">{{ f.k }}</span>
-              <span style="font:500 14px Outfit,sans-serif;color:#101114;text-align:right">{{ f.v }}</span>
+            <div style="display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(20,23,21,.1);padding-bottom:8px">
+              <span style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#5C6A5F">{{ f.k }}</span>
+              <span style="font:500 14px Outfit,sans-serif;color:#141715;text-align:right">{{ f.v }}</span>
             </div>
           </sc-for>
         </div>
-        <button onClick="{{ ask }}" style="width:100%;min-height:52px;border:none;border-radius:999px;background:#101114;color:#FFD34E;font:600 16px Outfit,sans-serif;cursor:pointer">{{ t.askProduct }}</button>
+        <button onClick="{{ ask }}" style="width:100%;min-height:52px;border:none;border-radius:999px;background:#123F2E;color:#E0A526;font:600 16px Outfit,sans-serif;cursor:pointer">{{ t.askProduct }}</button>
         <sc-if value="{{ asked }}" hint-placeholder-val="{{ false }}">
-          <p style="font:400 14px/1.5 Outfit,sans-serif;color:#101114;background:#FFD34E;border-radius:14px;padding:12px;margin:12px 0 0">{{ t.askNote }}</p>
+          <p style="font:400 14px/1.5 Outfit,sans-serif;color:#141715;background:#E0A526;border-radius:14px;padding:12px;margin:12px 0 0">{{ t.askNote }}</p>
         </sc-if>
-        <button onClick="{{ closeSheet }}" style="width:100%;min-height:48px;border:none;background:none;color:#6b655c;font:600 15px Outfit,sans-serif;cursor:pointer;margin-top:6px">{{ t.close }}</button>
+        <button onClick="{{ closeSheet }}" style="width:100%;min-height:48px;border:none;background:none;color:#5C6A5F;font:600 15px Outfit,sans-serif;cursor:pointer;margin-top:6px">{{ t.close }}</button>
       </div>
     </div>
   </sc-if>
@@ -365,10 +415,17 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:420,&quot;height&quot;:900},&quot;defaultLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;es&quot;,&quot;en&quot;],&quot;default&quot;:&quot;es&quot;,&quot;tsType&quot;:&quot;'es'|'en'&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;defaultConcept&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;breakfast&quot;,&quot;night&quot;],&quot;default&quot;:&quot;breakfast&quot;,&quot;tsType&quot;:&quot;'breakfast'|'night'&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;showPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;}}">
 const T = {
   es: {
-    heroKicker: 'WYNWOOD · MIAMI', heroTitle: 'Esto es 212.',
+    heroKicker: 'WYNWOOD · MIAMI', heroTitle: 'Esto es AP Bagel.',
     heroSub: 'Bagels de desayuno y sándwiches cargados de madrugada. Una sola cocina, dos horarios.',
     cta1: 'Ver menú', cta2: 'Cómo llegar',
     photoPending: 'FOTO PENDIENTE', photoHero: 'Portada: producto terminado, 1200 × 1500 px',
+    conceptPhoto: 'FOTOGRAFÍA DE CONCEPTO',
+    altHero: 'Bagel relleno sobre bandeja crema y fondo verde.',
+    altStory: 'Manos preparando un bagel en una cocina profesional.',
+    altCatering: 'Mesa de catering con bagels y acompañamientos.',
+    cateringKicker: 'CATERING', cateringTitle: 'Bagels para tu grupo.',
+    cateringSub: 'Oficinas, producciones y eventos en Miami. Capacidad y precios se confirman por consulta.',
+    cateringCta: 'Pedir cotización',
     todayLabel: 'HORARIO PUBLICADO DE HOY', breakfast: 'Desayuno', night: 'Noche', closed: 'Cerrado',
     scheduleNote: 'Horario inicial del plan operativo. Confirmar antes de publicar.',
     conceptsTitle: 'Dos cocinas, un camión.', conceptsSub: 'La mañana es café y bagels. La noche es parrilla y pan brioche.',
@@ -377,14 +434,15 @@ const T = {
     seeMenu: 'Ver el menú', popular: 'Lo que más piden.', allMenu: 'Menú completo',
     saucesKicker: 'PROGRAMA DE SALSAS', saucesTitle: 'Tres salsas. Toda la carta.',
     saucesNote: 'Una salsa incluida con cada producto. Salsa adicional $0.75.',
-    locationTitle: 'Nos vemos en 212.', locationSub: 'Trailer en Wynwood, Miami. Horario inicial por concepto.',
+    locationTitle: 'Nos vemos en AP Bagel.', locationSub: 'Trailer en Wynwood, Miami. Horario inicial por concepto.',
     mapPending: 'MAPA POR CONFIRMAR',
     addressPending: 'Dirección exacta y punto de mapa pendientes de confirmar con el propietario.',
-    storiesTitle: 'Dentro de 212.', allStories: 'Ver todas',
+    storiesTitle: 'Dentro de AP Bagel.', allStories: 'Ver todas',
     finalCta: '¿Con hambre?',
     menuKicker: 'MENÚ', menuTitle: 'Encuentra tu próximo antojo.',
-    bagelsKicker: 'BUENO SABER', priceNote: 'Precios del plan operativo de septiembre 2026. Sujetos a confirmación. Los precios de delivery pueden variar entre 15% y 25%.',
-    blogKicker: 'HISTORIAS', blogTitle: 'Dentro de 212.',
+    bagelsKicker: 'BUENO SABER', legacyNote: 'Menú heredado de 212. Pendiente confirmar qué productos permanecen bajo AP Bagel y cómo se nombran.',
+    priceNote: 'Precios del plan operativo de septiembre 2026. Sujetos a confirmación. Los precios de delivery pueden variar entre 15% y 25%.',
+    blogKicker: 'HISTORIAS', blogTitle: 'Dentro de AP Bagel.',
     blogSub: 'Seis piezas del calendario editorial. Cada una espera una prueba real antes de publicarse.',
     backToBlog: 'Historias', articleTemplate: 'PLANTILLA DE ARTÍCULO',
     authorSlot: 'AUTOR REAL', dateSlot: 'FECHA DE PUBLICACIÓN', langSlot: 'ES / EN',
@@ -396,7 +454,7 @@ const T = {
     close: 'Cerrar',
     drawerNote: 'Fase 1: información, menú y contacto. Los pedidos en línea llegan después.',
     footerAddress: 'Wynwood, Miami, FL · Dirección por confirmar',
-    footerNote: 'Precios, horarios e ingredientes sujetos a confirmación del propietario. Fotografía pendiente de producción. Maqueta de the303 creative, no una web publicada.',
+    footerNote: 'Precios, horarios e ingredientes sujetos a confirmación del propietario. Fotografía pendiente de producción. Transición de marca desde 212 pendiente de aprobación; la licencia comercial de la tipografía Friend Bestie debe confirmarse antes de publicar. Maqueta de the303 creative, no una web publicada.',
     facts: { ingr: 'INGREDIENTES', sauce: 'SALSA', concept: 'CONCEPTO', avail: 'DISPONIBILIDAD', bagel: 'BAGEL', prep: 'PREPARACIÓN' },
     catLabels: { bagels: 'Bagels', cafe: 'Café', combos: 'Combos', sandwiches: 'Sándwiches', sides: 'Acompañantes', salsas: 'Salsas' },
     extraBf: 'Tres variedades de bagel para empezar: Plain, Everything y Asiago. Agregar papas doradas en la plancha por $3.00. Meta de entrega: 5 minutos o menos.',
@@ -405,7 +463,7 @@ const T = {
     blurbNt: 'Servicio de jueves a domingo, desde las 7:00 p.m.',
     days: ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'],
     week: 'SEMANA', draft: 'BORRADOR',
-    chatOpen: 'Abrir asistente', chatTitle: 'Asistente 212', chatSub: 'Menú, horarios y ubicación.',
+    chatOpen: 'Abrir asistente', chatTitle: 'Asistente AP Bagel', chatSub: 'Menú, horarios y ubicación.',
     chatIntro: 'Hola. Puedo ayudarte con el menú, los horarios y la ubicación. ¿Qué necesitas?',
     chatNote: 'Esto es atención, no una caja registradora. No confirma pedidos ni reservas.',
     chatPick: 'Elige una pregunta', chatClose: 'Cerrar asistente', chatGoMenu: 'Ver el menú completo',
@@ -420,14 +478,21 @@ const T = {
       menu: 'La mañana son bagels de desayuno desde $7.50 y café desde $3.00. La noche son sándwiches a la parrilla desde $13, con papas y maíz callejero.',
       place: 'Somos un trailer en Wynwood, Miami. La dirección exacta y el punto de mapa están pendientes de confirmar antes de publicarlos.',
       catering: 'Catering está en preparación. Puedes dejar una consulta con fecha, número de personas y zona; el equipo responde con lo que sí puede confirmar.',
-      human: 'Deja tu consulta con un teléfono o correo y el equipo de 212 responde. Recibirás un aviso de que la consulta quedó registrada, no de que fue aceptada.'
+      human: 'Deja tu consulta con un teléfono o correo y el equipo de AP Bagel responde. Recibirás un aviso de que la consulta quedó registrada, no de que fue aceptada.'
     }
   },
   en: {
-    heroKicker: 'WYNWOOD · MIAMI', heroTitle: 'This is 212.',
+    heroKicker: 'WYNWOOD · MIAMI', heroTitle: 'This is AP Bagel.',
     heroSub: 'Breakfast bagels and loaded late-night sandwiches. One kitchen, two shifts.',
     cta1: 'Explore the menu', cta2: 'Get directions',
     photoPending: 'PHOTO PENDING', photoHero: 'Hero: finished product, 1200 × 1500 px',
+    conceptPhoto: 'CONCEPT PHOTOGRAPHY',
+    altHero: 'Filled bagel on a cream tray against a green background.',
+    altStory: 'Hands assembling a bagel in a professional kitchen.',
+    altCatering: 'Catering table with bagels and sides.',
+    cateringKicker: 'CATERING', cateringTitle: 'Bagels for your group.',
+    cateringSub: 'Offices, productions and events in Miami. Capacity and pricing confirmed per inquiry.',
+    cateringCta: 'Request a quote',
     todayLabel: "TODAY'S PUBLISHED HOURS", breakfast: 'Breakfast', night: 'Late night', closed: 'Closed',
     scheduleNote: 'Opening schedule from the operating plan. Confirm before publishing.',
     conceptsTitle: 'Two kitchens, one truck.', conceptsSub: 'Mornings are coffee and bagels. Nights are the grill and brioche.',
@@ -436,14 +501,15 @@ const T = {
     seeMenu: 'See the menu', popular: 'What people order.', allMenu: 'Full menu',
     saucesKicker: 'SAUCE PROGRAM', saucesTitle: 'Three sauces. Whole menu.',
     saucesNote: 'One sauce included with every item. Extra sauce $0.75.',
-    locationTitle: 'See you at 212.', locationSub: 'Trailer in Wynwood, Miami. Opening hours by concept.',
+    locationTitle: 'See you at AP Bagel.', locationSub: 'Trailer in Wynwood, Miami. Opening hours by concept.',
     mapPending: 'MAP TO CONFIRM',
     addressPending: 'Exact address and map pin pending confirmation by the owner.',
-    storiesTitle: 'Inside 212.', allStories: 'See all',
+    storiesTitle: 'Inside AP Bagel.', allStories: 'See all',
     finalCta: 'Hungry?',
     menuKicker: 'MENU', menuTitle: 'Find your next craving.',
-    bagelsKicker: 'GOOD TO KNOW', priceNote: 'Prices from the September 2026 operating plan. Subject to confirmation. Delivery prices may run 15%–25% higher.',
-    blogKicker: 'STORIES', blogTitle: 'Inside 212.',
+    bagelsKicker: 'GOOD TO KNOW', legacyNote: 'Menu inherited from 212. Pending confirmation of which items stay under AP Bagel and how they are named.',
+    priceNote: 'Prices from the September 2026 operating plan. Subject to confirmation. Delivery prices may run 15%–25% higher.',
+    blogKicker: 'STORIES', blogTitle: 'Inside AP Bagel.',
     blogSub: 'Six pieces from the editorial calendar. Each one needs real proof before it ships.',
     backToBlog: 'Stories', articleTemplate: 'ARTICLE TEMPLATE',
     authorSlot: 'REAL AUTHOR', dateSlot: 'PUBLISH DATE', langSlot: 'ES / EN',
@@ -455,7 +521,7 @@ const T = {
     close: 'Close',
     drawerNote: 'Phase 1: information, menu and contact. Online ordering comes later.',
     footerAddress: 'Wynwood, Miami, FL · Address to confirm',
-    footerNote: 'Prices, hours and ingredients subject to owner confirmation. Photography pending production. Design mockup by the303 creative, not a published site.',
+    footerNote: 'Prices, hours and ingredients subject to owner confirmation. Photography pending production. Brand migration from 212 pending approval; the commercial license for the Friend Bestie typeface must be confirmed before publishing. Design mockup by the303 creative, not a published site.',
     facts: { ingr: 'INGREDIENTS', sauce: 'SAUCE', concept: 'CONCEPT', avail: 'AVAILABILITY', bagel: 'BAGEL', prep: 'PREP' },
     catLabels: { bagels: 'Bagels', cafe: 'Coffee', combos: 'Combos', sandwiches: 'Sandwiches', sides: 'Sides', salsas: 'Sauces' },
     extraBf: 'Three bagel varieties to start: Plain, Everything and Asiago. Add griddled home fries for $3.00. Delivery target: 5 minutes or less.',
@@ -464,7 +530,7 @@ const T = {
     blurbNt: 'Served Thursday to Sunday, from 7:00 p.m.',
     days: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
     week: 'WEEK', draft: 'DRAFT',
-    chatOpen: 'Open assistant', chatTitle: '212 Assistant', chatSub: 'Menu, hours and location.',
+    chatOpen: 'Open assistant', chatTitle: 'AP Bagel Assistant', chatSub: 'Menu, hours and location.',
     chatIntro: 'Hi. I can help with the menu, the hours and the location. What do you need?',
     chatNote: 'This is customer support, not a cash register. It does not confirm orders or reservations.',
     chatPick: 'Pick a question', chatClose: 'Close assistant', chatGoMenu: 'See the full menu',
@@ -479,22 +545,22 @@ const T = {
       menu: 'Mornings are breakfast bagels from $7.50 and coffee from $3.00. Nights are grilled sandwiches from $13, with loaded fries and street corn.',
       place: "We're a trailer in Wynwood, Miami. The exact address and map pin are pending confirmation before we publish them.",
       catering: 'Catering is being set up. You can leave an inquiry with date, headcount and area; the team replies with what it can actually confirm.',
-      human: 'Leave your inquiry with a phone or email and the 212 team will reply. You get a notice that the inquiry was recorded, not that it was accepted.'
+      human: 'Leave your inquiry with a phone or email and the AP Bagel team will reply. You get a notice that the inquiry was recorded, not that it was accepted.'
     }
   }
 };
 
 const ITEMS = [
-  { id:'eggcheese', img:'https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192041_68cc6b6d-a2f2-4f9b-937f-a341ed847971.png', c:'bf', cat:'bagels', name:'Egg & Cheese', price:'$7.50',
+  { id:'eggcheese', c:'bf', cat:'bagels', name:'Egg & Cheese', price:'$7.50',
     es:'2 huevos y queso americano.', en:'Two eggs and American cheese.',
     ingr:{es:'Huevo, queso americano, bagel', en:'Egg, American cheese, bagel'} },
-  { id:'classic', img:'https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192041_36074cb7-6206-4a85-8a3a-d8f3409d2789.png', c:'bf', cat:'bagels', name:'The Classic', price:'$9.50',
+  { id:'classic', c:'bf', cat:'bagels', name:'The Classic', price:'$9.50',
     es:'2 huevos, queso, bacon o salchicha y salsa de la casa.', en:'Two eggs, cheese, bacon or sausage and house sauce.',
     ingr:{es:'Huevo, queso, bacon o salchicha, salsa de la casa', en:'Egg, cheese, bacon or sausage, house sauce'} },
-  { id:'miami', img:'https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192120_76c8f314-3f75-4c01-b68b-c0b8432bb64d.png', c:'bf', cat:'bagels', name:'Miami Morning', price:'$10.50',
+  { id:'miami', c:'bf', cat:'bagels', name:'Miami Morning', price:'$10.50',
     es:'2 huevos, jamón, queso suizo, cebolla asada y salsa de cilantro y ajo.', en:'Two eggs, ham, swiss, roasted onion and cilantro-garlic sauce.',
     ingr:{es:'Huevo, jamón, queso suizo, cebolla asada', en:'Egg, ham, swiss, roasted onion'}, sauce:{es:'Cilantro y ajo', en:'Cilantro & garlic'} },
-  { id:'loaded', img:'https://d8j0ntlcm91z4.cloudfront.net/user_2xer2BmVWuns6fBapceAXXZOrmH/hf_20260913_192120_0f60cd7f-4a4a-4593-b5a6-f4b69ded5847.png', c:'bf', cat:'bagels', name:'Loaded Bagel', price:'$12.50',
+  { id:'loaded', c:'bf', cat:'bagels', name:'Loaded Bagel', price:'$12.50',
     es:'2 huevos, bacon, salchicha, queso, papitas y salsa rosada picante.', en:'Two eggs, bacon, sausage, cheese, potato sticks and spicy pink sauce.',
     ingr:{es:'Huevo, bacon, salchicha, queso, papitas', en:'Egg, bacon, sausage, cheese, potato sticks'}, sauce:{es:'Rosada picante', en:'Spicy pink'} },
   { id:'steakegg', c:'bf', cat:'bagels', name:'Steak & Egg', price:'$14.50',
@@ -545,73 +611,22 @@ const ITEMS = [
   { id:'s3', c:'nt', cat:'salsas', name:'Honey-chipotle', price:'+$0.75', es:'Una salsa incluida con cada producto.', en:'One sauce included with every item.' }
 ];
 
+const PHOTOS = {
+  chicken: 'img/hero-desktop.jpg',
+  butcher: 'img/menu-collection.jpg',
+  loaded: 'img/builder-exploded.jpg',
+  miami: 'img/story-kitchen.jpg',
+  philly: 'img/menu-collection.jpg'
+};
+const POST_PHOTOS = ['img/story-kitchen.jpg','img/menu-collection.jpg','img/hero-desktop.jpg','img/catering.jpg','img/builder-exploded.jpg','img/hero-mobile.jpg'];
+
 const POSTS = [
-  { w:1, es:'Conoce 212 Fast Food & Catering en Miami.', en:'Meet 212 Fast Food & Catering in Miami.', pes:'Entrevista y relato fundador.', pen:'Founder interview and origin story.',
-    bodyEs:[
-      {h:"Un food truck con dos turnos", p:"212 es comida rapida y catering en Wynwood, Miami. De manana funciona como parada de desayuno; de jueves a domingo abre servicio de madrugada para la vida nocturna del barrio."},
-      {h:"Hecho para llevar", p:"Todo el menu esta pensado para comer de pie, caminando o por delivery: sandwiches de desayuno, cafe y opciones que viajan bien sin perder calidad."},
-      {h:"Para el barrio y para eventos", p:"Ademas del truck, 212 ofrece catering para eventos en Miami. La misma cocina que resuelve tu desayuno puede alimentar a tu equipo o tu fiesta."}
-    ],
-    bodyEn:[
-      {h:"A truck with two shifts", p:"212 is fast food and catering in Wynwood, Miami. Mornings run as a breakfast stop; Thursday through Sunday it opens a late-night service for the neighborhood's nightlife."},
-      {h:"Built to go", p:"The whole menu is made to eat standing, walking or by delivery: breakfast sandwiches, coffee and options that travel well without losing quality."},
-      {h:"For the block and for events", p:"Beyond the truck, 212 caters events across Miami. The same kitchen that handles your breakfast can feed your team or your party."}
-    ] },
-  { w:2, es:'Que encontraras en el menu de 212.', en:"What you'll find on the 212 menu.", pes:'Menu y fotografias aprobados.', pen:'Approved menu and photography.',
-    bodyEs:[
-      {h:"Los sandwiches de desayuno", p:"El corazon del menu son los sandwiches de huevo: del simple de huevo y queso al Classic con bacon o salchicha y salsa de la casa, el Miami con jamon, suizo y salsa de cilantro y ajo, y el Loaded con papitas y salsa rosada picante."},
-      {h:"Cafe para el camino", p:"Americano, latte, iced latte y cold brew. El cold brew y el iced latte viajan especialmente bien si pides delivery en Wynwood."},
-      {h:"Combos", p:"Hay combos que juntan un sandwich con cafe para resolver el desayuno completo en un solo pedido."}
-    ],
-    bodyEn:[
-      {h:"The breakfast sandwiches", p:"The heart of the menu is the egg sandwiches: from a simple egg and cheese to the Classic with bacon or sausage and house sauce, the Miami with ham, swiss and cilantro-garlic sauce, and the Loaded with potato sticks and spicy pink sauce."},
-      {h:"Coffee to go", p:"Americano, latte, iced latte and cold brew. The cold brew and iced latte travel especially well if you order delivery in Wynwood."},
-      {h:"Combos", p:"There are combos that pair a sandwich with coffee so you can settle breakfast in a single order."}
-    ] },
-  { w:3, es:'Como visitar 212: ubicacion y horarios.', en:'How to visit 212: location and hours.', pes:'Datos actuales y acceso real.', pen:'Current data and real access notes.',
-    bodyEs:[
-      {h:"Donde", p:"212 esta en Wynwood, Miami. Confirma la ubicacion exacta del truck por mensaje directo antes de salir, porque un food truck puede ajustar su punto."},
-      {h:"Horario de desayuno", p:"De lunes a viernes de 6:30 a 11:30 a.m.; sabado y domingo de 7:30 a.m. a 12:00 p.m. Ideal para desayunar antes del trabajo o despues de entrenar."},
-      {h:"Servicio de madrugada", p:"De jueves a domingo 212 abre de noche, hasta las 2 o 3 de la manana segun el dia. Es la parada para la salida nocturna de Wynwood."}
-    ],
-    bodyEn:[
-      {h:"Where", p:"212 is in Wynwood, Miami. Confirm the truck's exact spot by direct message before heading out, since a food truck can adjust its location."},
-      {h:"Breakfast hours", p:"Monday to Friday 6:30 to 11:30 a.m.; Saturday and Sunday 7:30 a.m. to 12:00 p.m. Perfect before work or after a workout."},
-      {h:"Late-night service", p:"Thursday through Sunday, 212 opens at night until 2 or 3 a.m. depending on the day. It's the stop for a Wynwood night out."}
-    ] },
-  { w:4, es:'Catering con 212: como preparar tu consulta.', en:'Catering with 212: how to prepare your inquiry.', pes:'Servicio y capacidad confirmados.', pen:'Confirmed service and capacity.',
-    bodyEs:[
-      {h:"Que decir en tu consulta", p:"Para cotizar rapido, dinos fecha, lugar, numero de personas y si es desayuno o servicio de noche. Con eso armamos una propuesta realista."},
-      {h:"Que funciona para grupos", p:"Los sandwiches de desayuno y el cafe rinden muy bien para equipos, rodajes y eventos de manana. Para eventos nocturnos, el menu de madrugada."},
-      {h:"Con cuanto tiempo pedir", p:"Cuanto antes reserves la fecha, mejor. Los fines de semana y las fechas altas se llenan primero."}
-    ],
-    bodyEn:[
-      {h:"What to include in your inquiry", p:"For a fast quote, tell us the date, location, headcount and whether it's breakfast or night service. That's enough to build a realistic proposal."},
-      {h:"What works for groups", p:"The breakfast sandwiches and coffee scale well for teams, film shoots and morning events. For night events, the late-night menu."},
-      {h:"How far ahead to book", p:"The sooner you lock the date, the better. Weekends and peak dates fill first."}
-    ] },
-  { w:6, es:'Las salsas de 212: ingredientes y combinaciones.', en:'The sauces of 212: ingredients and pairings.', pes:'Recetas revisadas con cocina.', pen:'Recipes reviewed with the kitchen.',
-    bodyEs:[
-      {h:"Salsa de la casa", p:"Es la base de varios sandwiches, incluido el Classic. Aporta el sabor que identifica a 212."},
-      {h:"Cilantro y ajo", p:"La salsa del Miami: fresca y con caracter, pensada para acompanar el jamon y el queso suizo."},
-      {h:"Rosada picante", p:"La del Loaded: cremosa con un golpe de picante que equilibra el bacon, la salchicha y las papitas."}
-    ],
-    bodyEn:[
-      {h:"House sauce", p:"It's the base of several sandwiches, including the Classic. It carries the flavor that identifies 212."},
-      {h:"Cilantro and garlic", p:"The Miami's sauce: fresh and full of character, made to go with the ham and swiss."},
-      {h:"Spicy pink", p:"The Loaded's sauce: creamy with a kick of heat that balances the bacon, sausage and potato sticks."}
-    ] },
-  { w:8, es:'La historia del nombre y los colores de 212.', en:'The story behind the name and colors of 212.', pes:'Testimonio directo autorizado.', pen:'Authorized first-hand testimony.',
-    bodyEs:[
-      {h:"Un nombre corto y directo", p:"212 es facil de recordar y de decir. En un food truck, un nombre corto en letras grandes funciona mejor que uno largo."},
-      {h:"Amarillo y negro", p:"La marca usa amarillo sobre negro: alto contraste, visible de lejos y de noche, coherente con un truck que trabaja de madrugada."},
-      {h:"La historia completa, pronto", p:"El relato del fundador y el porque del nombre se publicara aqui con su testimonio directo."}
-    ],
-    bodyEn:[
-      {h:"A short, direct name", p:"212 is easy to remember and to say. On a food truck, a short name in big letters works better than a long one."},
-      {h:"Yellow and black", p:"The brand uses yellow on black: high contrast, visible from far and at night, consistent with a truck that works the late hours."},
-      {h:"The full story, soon", p:"The founder's account and the reason behind the name will be published here, in his own words."}
-    ] }
+  { w:1, es:'Conoce AP Bagel en Miami.', en:'Meet AP Bagel in Miami.', pes:'Entrevista y relato fundador.', pen:'Founder interview and origin story.' },
+  { w:2, es:'Qué encontrarás en el menú de AP Bagel.', en:"What you'll find on the AP Bagel menu.", pes:'Menú y fotografías aprobados.', pen:'Approved menu and photography.' },
+  { w:3, es:'Cómo visitar AP Bagel: ubicación y horarios.', en:'How to visit AP Bagel: location and hours.', pes:'Datos actuales y acceso real.', pen:'Current data and real access notes.' },
+  { w:4, es:'Catering con AP Bagel: cómo preparar tu consulta.', en:'Catering with AP Bagel: how to prepare your inquiry.', pes:'Servicio y capacidad confirmados.', pen:'Confirmed service and capacity.' },
+  { w:6, es:'Las salsas de AP Bagel: ingredientes y combinaciones.', en:'The sauces of AP Bagel: ingredients and pairings.', pes:'Recetas revisadas con cocina.', pen:'Recipes reviewed with the kitchen.' },
+  { w:8, es:'La historia del nombre y los colores de AP Bagel.', en:'The story behind the name and colors of AP Bagel.', pes:'Testimonio directo autorizado.', pen:'Authorized first-hand testimony.' }
 ];
 
 const SCHEDULE = [
@@ -653,7 +668,7 @@ class Component extends DCLogic {
     let answer;
     if (key === 'hours') {
       const d = SCHEDULE[(new Date().getDay() + 6) % 7];
-      answer = t.breakfast + ': ' + (d.bf || t.closed) + '. ' + t.night + ': ' + (d.nt || t.closed) + '. ' + t.scheduleNote;
+      answer = t.breakfast + ': ' + (d.bf || t.closed) + ' · ' + t.night + ': ' + (d.nt || t.closed) + ' · ' + t.scheduleNote;
     } else answer = t.chatA[key];
     const q = t.chatQ[key];
     this.setState({ msgs: s.msgs.concat([{ me: true, text: q }, { me: false, text: answer }]) });
@@ -670,23 +685,24 @@ class Component extends DCLogic {
     const decorate = (it) => ({
       id: it.id, name: it.name, price: showPrices ? it.price : '—', desc: it[L],
       tag: it.avail ? it.avail[L] : '', conceptLabel: label(it),
-      tagColor: it.c === 'bf' ? '#B9233B' : '#101114', img: it.img,
+      photo: PHOTOS[it.id] || '', noPhoto: !PHOTOS[it.id],
+      tagColor: it.c === 'bf' ? '#A32A20' : '#141715',
       open: () => this.setState({ sheet: it, asked: false })
     });
 
     const cats = (s.concept === 'bf' ? ['bagels', 'cafe', 'combos'] : ['sandwiches', 'sides', 'combos', 'salsas']).map(id => ({
       id, label: t.catLabels[id],
-      bg: s.cat === id ? '#101114' : 'transparent',
-      fg: s.cat === id ? '#FFD34E' : '#101114',
+      bg: s.cat === id ? '#141715' : 'transparent',
+      fg: s.cat === id ? '#E0A526' : '#141715',
       go: () => this.setState({ cat: id })
     }));
 
     const items = ITEMS.filter(i => i.c === s.concept && i.cat === s.cat).map(decorate);
-    const featured = ['eggcheese', 'classic', 'miami', 'loaded'].map(id => decorate(ITEMS.find(i => i.id === id)));
+    const featured = ['chicken', 'butcher', 'loaded', 'miami'].map(id => decorate(ITEMS.find(i => i.id === id)));
 
     const posts = POSTS.map((p, i) => ({
       title: p[L], proof: L === 'es' ? p.pes : p.pen,
-      week: t.week + ' ' + p.w, status: t.draft,
+      week: t.week + ' ' + p.w, status: t.draft, photo: POST_PHOTOS[i % POST_PHOTOS.length],
       open: () => { this.setState({ post: i, screen: 'article', drawer: false }); if (typeof window !== 'undefined') window.scrollTo({ top: 0 }); }
     }));
 
@@ -719,11 +735,11 @@ class Component extends DCLogic {
       t, lang: L,
       isHome: s.screen === 'home', isMenu: s.screen === 'menu', isBlog: s.screen === 'blog', isArticle: s.screen === 'article',
       drawerOpen: s.drawer, toggleDrawer: () => this.setState({ drawer: !s.drawer }),
-      esBg: L === 'es' ? '#FFD34E' : 'transparent', esFg: L === 'es' ? '#101114' : '#F5F1E8',
-      enBg: L === 'en' ? '#FFD34E' : 'transparent', enFg: L === 'en' ? '#101114' : '#F5F1E8',
+      esBg: L === 'es' ? '#E0A526' : 'transparent', esFg: L === 'es' ? '#141715' : '#F4E9D2',
+      enBg: L === 'en' ? '#E0A526' : 'transparent', enFg: L === 'en' ? '#141715' : '#F4E9D2',
       setEs: () => this.setState({ lang: 'es' }), setEn: () => this.setState({ lang: 'en' }),
-      bfBg: s.concept === 'bf' ? '#FFD34E' : 'transparent', bfFg: s.concept === 'bf' ? '#101114' : '#F5F1E8',
-      ntBg: s.concept === 'nt' ? '#EF1D2B' : 'transparent', ntFg: s.concept === 'nt' ? '#ffffff' : '#F5F1E8',
+      bfBg: s.concept === 'bf' ? '#E0A526' : 'transparent', bfFg: s.concept === 'bf' ? '#141715' : '#F4E9D2',
+      ntBg: s.concept === 'nt' ? '#D83A2E' : 'transparent', ntFg: s.concept === 'nt' ? '#ffffff' : '#F4E9D2',
       goHome: () => this.go('home'), goMenu: () => this.go('menu'), goBlog: () => this.go('blog'),
       goLocation: () => this.goLoc(),
       goBreakfast: () => this.setConcept('bf'), goNight: () => this.setConcept('nt'),
@@ -733,19 +749,23 @@ class Component extends DCLogic {
       todayBreakfast: today.bf || t.closed, todayNight: today.nt || t.closed,
       sauces: [
         { name: L === 'es' ? 'Cilantro y ajo' : 'Cilantro & garlic', color: '#8FBF6A' },
-        { name: L === 'es' ? 'Salsa rosada picante' : 'Spicy pink sauce', color: '#EF1D2B' },
+        { name: L === 'es' ? 'Salsa rosada picante' : 'Spicy pink sauce', color: '#D83A2E' },
         { name: 'Honey-chipotle', color: '#E7A625' }
       ],
-      sheet: sh ? { name: sh.name, price: showPrices ? sh.price : '—', desc: sh[L], conceptLabel: label(sh), tagColor: sh.c === 'bf' ? '#B9233B' : '#101114' } : null,
+      sheet: sh ? { name: sh.name, price: showPrices ? sh.price : '—', desc: sh[L], conceptLabel: label(sh), tagColor: sh.c === 'bf' ? '#A32A20' : '#141715' } : null,
       sheetFacts: facts,
+      sheetPhoto: sh ? (PHOTOS[sh.id] || '') : '',
+      sheetNoPhoto: sh ? !PHOTOS[sh.id] : false,
+      articlePhoto: s.post != null ? POST_PHOTOS[s.post % POST_PHOTOS.length] : '',
+      openChat: () => this.toggleChat(),
       chatOpen: s.chat,
       toggleChat: () => this.toggleChat(),
       closeChat: () => this.setState({ chat: false }),
       chatMsgs: s.msgs.map((m, i) => ({
         text: m.text, key: i,
         align: m.me ? 'flex-end' : 'flex-start',
-        bg: m.me ? '#FFD34E' : '#ffffff',
-        fg: '#101114',
+        bg: m.me ? '#E0A526' : '#ffffff',
+        fg: '#141715',
         radius: m.me ? '16px 16px 4px 16px' : '16px 16px 16px 4px'
       })),
       chatQuestions: ['menu', 'hours', 'place', 'catering', 'human'].map(k => ({
@@ -756,7 +776,13 @@ class Component extends DCLogic {
       ask: () => this.setState({ asked: true }),
       asked: s.asked,
       articleTitle: s.post != null ? POSTS[s.post][L] : '',
-      articleBlocks: s.post != null ? (POSTS[s.post][L === 'es' ? 'bodyEs' : 'bodyEn'] || []) : []
+      articleBlocks: L === 'es'
+        ? [{ h: 'Subtítulo útil', p: 'Un bloque por idea. Fotos propias, datos confirmados y nada de relleno.' },
+           { h: 'Lo que el cliente pregunta', p: 'Preguntas frecuentes auténticas, tomadas de mensajes reales.' },
+           { h: 'Prueba necesaria', p: s.post != null ? POSTS[s.post].pes : '' }]
+        : [{ h: 'A useful subhead', p: 'One block per idea. Own photos, confirmed data, no filler.' },
+           { h: 'What customers ask', p: 'Real FAQs, taken from actual messages.' },
+           { h: 'Proof needed', p: s.post != null ? POSTS[s.post].pen : '' }]
     };
   }
 

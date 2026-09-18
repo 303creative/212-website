@@ -3,3 +3,5 @@ uploads/
 .thumbnail
 *.psd
 *.psb
+
+img/*.png
